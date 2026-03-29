@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentStep === 0) {
             projectName = text;
             currentStep = 1;
-            await aiReply(`Perfecto, trabajemos en **${projectName}**.`);
+            await aiReply("Perfecto, trabajemos en **" + projectName + "**.");
             askNextR1();
         } else if (currentStep >= 1 && currentStep <= 7) {
             r1Answers[currentStep - 1] = text;
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- AI REPLIES ---
     async function askNextR1() {
         const q = r1Questions[currentStep - 1];
-        roundTag.textContent = `RONDA 1: PREGUNTA ${currentStep}/7`;
+        roundTag.textContent = "RONDA 1: PREGUNTA " + currentStep + "/7";
         await aiReply(q.q);
     }
 
@@ -95,11 +95,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 showFinalize();
             } else {
                 roundTag.textContent = "RONDA 2: PERFORACI\u00d3N";
-                await aiReply(`He detectado ${r2Followups.length} puntos que necesitan m\u00e1s profundidad. Vamos uno por uno.`);
+                await aiReply("He detectado " + r2Followups.length + " puntos que necesitan m\u00e1s profundidad. Vamos uno por uno.");
                 askNextR2();
             }
         } catch (e) {
             setTyping(false);
+            await aiReply("Ha ocurrido un error al analizar. Pasemos al diagn\u00f3stico.");
             showFinalize();
         }
     }
@@ -111,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (pending.razon === "superficial") intro = "Esta respuesta me parece un poco superficial:";
             else if (pending.razon === "contradiccion") intro = "He notado una posible contradicci\u00f3n aqu\u00ed:";
             else intro = "Necesito m\u00e1s evidencia sobre esto:";
-            await aiReply(`${intro}\n\n**${pending.pregunta}**`);
+            await aiReply(intro + "\n\n**" + pending.pregunta + "**");
         } else {
             await aiReply("Gracias. He perforado lo suficiente. Generemos el reporte.");
             showFinalize();
@@ -121,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- UI HELPERS ---
     function addMessage(role, text) {
         const div = document.createElement("div");
-        div.className = `${role}-bubble`;
+        div.className = role + "-bubble";
         div.innerHTML = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
         chatHistory.appendChild(div);
         chatHistory.scrollTop = chatHistory.scrollHeight;
@@ -143,7 +144,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function showFinalize() {
-        document.getElementById("chat-input-area")?.classList.add("hidden");
+        const inputArea = document.getElementById("chat-input-area");
+        if (inputArea) inputArea.classList.add("hidden");
         finalizeStep.classList.remove("hidden");
         currentStep = 9;
     }
@@ -154,11 +156,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const step = document.createElement("div");
             const isCompleted = r1Answers[i] !== "";
             const isActive = (i === currentStep - 1);
-            step.className = `chain-step ${isActive ? 'active' : ''} ${isCompleted ? 'completed' : ''}`;
-            step.innerHTML = `
-                <div class="step-num">${i + 1}</div>
-                <div class="step-label">${q.q.substring(0, 20)}...</div>
-            `;
+            step.className = "chain-step " + (isActive ? "active" : "") + " " + (isCompleted ? "completed" : "");
+            step.innerHTML = '<div class="step-num">' + (i + 1) + '</div><div class="step-label">' + q.q.substring(0, 25) + '...</div>';
             evidenceChain.appendChild(step);
         });
     }
@@ -166,6 +165,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- FINALIZE ---
     finalizeBtn.addEventListener("click", async () => {
         loadingOverlay.classList.remove("hidden");
+        resultsAside.style.display = "block";
+        document.getElementById("wizard-panel").classList.add("hidden");
+
         const payload = {
             projectName,
             answers_r1: r1Answers,
@@ -178,11 +180,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 body: JSON.stringify(payload)
             });
             const data = await res.json();
-            updateDashboard(data);
-            document.getElementById("wizard-panel").classList.add("hidden");
-            resultsAside.style.display = "block";
+            if (data.error) {
+                alert("Error del servidor: " + data.error);
+            } else {
+                updateDashboard(data);
+            }
         } catch (e) {
-            alert("Error");
+            alert("Error de conexi\u00f3n con el servidor.");
         } finally {
             loadingOverlay.classList.add("hidden");
         }
@@ -199,10 +203,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (data.rubric) {
             Object.keys(data.rubric).forEach(key => {
                 const val = data.rubric[key];
-                const textEl = document.getElementById(`val-${key}`);
-                const barEl = document.getElementById(`bar-${key}`);
-                if (textEl) textEl.textContent = `${val}/10`;
-                if (barEl) barEl.style.width = `${val * 10}%`;
+                const textEl = document.getElementById("val-" + key);
+                const barEl = document.getElementById("bar-" + key);
+                if (textEl) textEl.textContent = val + "/10";
+                if (barEl) barEl.style.width = (val * 10) + "%";
             });
         }
         const mList = document.getElementById("mitigation-list");
@@ -218,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("scenario-neu").textContent = data.scenarios.neutral;
             document.getElementById("scenario-pes").textContent = data.scenarios.pessimistic;
         }
-        document.getElementById("investment-estimate").textContent = data.investment_estimate;
-        document.getElementById("cash-flow-projection").textContent = data.cash_flow_projection;
+        document.getElementById("investment-estimate").textContent = data.investment_estimate || "--";
+        document.getElementById("cash-flow-projection").textContent = data.cash_flow_projection || "--";
     }
 });
