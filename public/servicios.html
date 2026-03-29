@@ -26,6 +26,13 @@
         <a href="contacto.html" class="btn-nav-outline">Contact</a>
         <a href="smokescan/index.html" class="btn-nav-primary">SmokeScan</a>
       </div>
+      <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
     </div>
   </nav>
 
@@ -300,6 +307,15 @@
     </div>
   </footer>
 
+  <!-- ==================== MOBILE MENU ==================== -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <a href="index.html" class="mobile-nav-link" onclick="closeMobileMenu()">Home</a>
+    <a href="servicios.html" class="mobile-nav-link" onclick="closeMobileMenu()">Services</a>
+    <a href="nosotros.html" class="mobile-nav-link" onclick="closeMobileMenu()">About Us</a>
+    <a href="contacto.html" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a>
+    <a href="smokescan/index.html" class="btn-primary" style="margin-top: 24px; font-size: 18px; padding: 14px 32px;" onclick="closeMobileMenu()">Validate</a>
+  </div>
+
   <script>
     // Simple Tab Logic
     document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -310,6 +326,25 @@
         document.getElementById(btn.dataset.tab).classList.add('active');
       });
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu-overlay');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('active');
+          document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+      }
+    });
+
+    function closeMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu-overlay');
+      if (mobileMenu) {
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
   </script>
 
 </body>

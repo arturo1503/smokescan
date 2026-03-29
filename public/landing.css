@@ -1316,3 +1316,66 @@ details:not([open]) .faq-icon::after {
     padding: 40px 0 !important;
   }
 }
+
+/* ==================== MOBILE MENU ==================== */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+  color: var(--white);
+}
+
+.menu-toggle svg {
+  width: 28px;
+  height: 28px;
+}
+
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 72px; /* Just below the navbar height */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--white);
+  z-index: 999;
+  flex-direction: column;
+  padding: 48px 24px;
+  align-items: center;
+  gap: 32px;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.mobile-menu-overlay.active {
+  display: flex !important;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mobile-menu-overlay .mobile-nav-link {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.mobile-menu-overlay .mobile-nav-link:hover {
+  color: var(--blue-accent);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+}
