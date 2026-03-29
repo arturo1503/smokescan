@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,13 +32,13 @@
                 </div>
                 <div id="chat-history" class="chat-history">
                     <div class="ai-bubble first-msg">
-                        <p>Hola, soy SmokeScan. Vamos a validar tu idea con el M\u00e9todo 7+7\u2122.</p>
-                        <p>Para empezar, \u00bfcu\u00e1l es el nombre de tu proyecto?</p>
+                        <p>Hola, soy SmokeScan. Vamos a validar tu idea con el Método 7+7™.</p>
+                        <p>Para empezar, ¿cuál es el nombre de tu proyecto?</p>
                     </div>
                 </div>
                 <div id="chat-input-area" class="chat-input-area">
                     <div class="input-wrapper">
-                        <textarea id="user-input" rows="1" placeholder="Escribe tu respuesta aqu\u00ed..."></textarea>
+                        <textarea id="user-input" rows="1" placeholder="Escribe tu respuesta aquí..."></textarea>
                         <button type="button" id="send-btn" class="send-btn">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                         </button>
@@ -48,24 +48,24 @@
                     </div>
                 </div>
                 <div id="finalize-step" class="hidden finalize-container">
-                    <button type="button" class="btn-primary-ss" id="finalize-btn">VER DIAGN\u00d3STICO FINAL</button>
+                    <button type="button" class="btn-primary-ss" id="finalize-btn">VER DIAGNÓSTICO FINAL</button>
                 </div>
             </main>
 
-            <aside class="dashboard-panel glassmorphism" id="dashboard">
+            <aside class="dashboard-panel glassmorphism" id="dashboard" style="display:none;">
                 <div id="loading-overlay" class="hidden">
                     <div class="spinner"></div>
                     <p>AI is querying and validating...</p>
                     <small class="loading-status">Analyzing Market Data</small>
                 </div>
                 <div id="clarification-panel" class="hidden">
-                    <h2>\u26a0\ufe0f MORE INFORMATION REQUIRED</h2>
+                    <h2>⚠️ MORE INFORMATION REQUIRED</h2>
                     <p class="clarification-desc">The idea is too ambiguous to evaluate with mathematical precision. Clarify the following points:</p>
                     <div id="questions-container" class="mt-1"></div>
                     <button type="button" class="btn-primary-ss" id="submit-answers-btn" style="margin-top: 15px;">SUBMIT ANSWERS</button>
                 </div>
                 <div id="results-panel">
-                    <div class="results-header"><h2>AI ANALYSIS & SCORING</h2></div>
+                    <div class="results-header"><h2>AI ANALYSIS &amp; SCORING</h2></div>
                     <div class="dashboard-grid">
                         <div class="gauge-card">
                             <div class="gauge-wrapper" style="height: 65px; width: 130px;">
@@ -95,7 +95,7 @@
                         <div class="metric-card competition"><span>Competition</span><h3 id="competition-level">--</h3><div class="competition-bar"><div class="competition-fill" id="competition-fill"></div></div></div>
                     </div>
                     <div class="scenarios-container rubric-section">
-                        <h3>\ud83d\udcca WEIGHTED RUBRIC (PONDERADA)</h3>
+                        <h3>📊 WEIGHTED RUBRIC (PONDERADA)</h3>
                         <div class="rubric-grid" id="rubric-grid">
                             <div class="rubric-item"><div class="rubric-info"><span>Market Clarity</span><small id="val-market_clarity">0/10</small></div><div class="rubric-bar-bg"><div class="rubric-bar-fill" id="bar-market_clarity" style="width: 0%"></div></div></div>
                             <div class="rubric-item"><div class="rubric-info"><span>Tech Maturity</span><small id="val-tech_feasibility">0/10</small></div><div class="rubric-bar-bg"><div class="rubric-bar-fill" id="bar-tech_feasibility" style="width: 0%"></div></div></div>
@@ -110,7 +110,7 @@
                         <div class="metric-card full-width"><span>Cash Flow Projection</span><p id="cash-flow-projection" class="sm-text">--</p></div>
                     </div>
                     <div class="scenarios-container">
-                        <h3>\ud83d\udcc8 PROBABLE SCENARIOS</h3>
+                        <h3>📈 PROBABLE SCENARIOS</h3>
                         <div class="scenarios-grid">
                             <div class="scenario-box optimistic"><span class="scenario-title">Optimistic</span><p id="scenario-opt">--</p></div>
                             <div class="scenario-box neutral"><span class="scenario-title">Base / Neutral</span><p id="scenario-neu">--</p></div>
@@ -118,7 +118,7 @@
                         </div>
                     </div>
                     <div class="mitigation-card hidden" id="mitigation-card">
-                        <h3>\u26a0\ufe0f MITIGATION PLAN</h3>
+                        <h3>⚠️ MITIGATION PLAN</h3>
                         <ul id="mitigation-list"></ul>
                     </div>
                 </div>
