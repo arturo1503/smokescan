@@ -1,0 +1,12 @@
+<svg width="180" height="32" viewBox="0 0 180 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="16" cy="16" r="14" fill="url(#brandGrad)"/>
+  <defs>
+    <linearGradient id="brandGrad" x1="2" y1="2" x2="30" y2="30">
+      <stop stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+  <text x="40" y="23" font-family="'Inter', 'Roboto', sans-serif" font-size="22" font-weight="800" fill="#ffffff" letter-spacing="-0.5">
+    Smoke<tspan font-weight="400" fill="#a1a1aa">Studio</tspan>
+  </text>
+</svg>
