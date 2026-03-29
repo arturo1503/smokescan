@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmokeScan | AI Idea Validator</title>
+    <meta name="description" content="Validate your startup idea with AI using the 7+7 Method. Get a VC-grade diagnostic in minutes.">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="ss-header">
+            <div class="ss-header-inner">
+                <span class="ss-logo-text" style="font-size:20px;font-weight:900;letter-spacing:-0.02em;">SMOKESCAN</span>
+                <span class="ss-tagline" style="font-size:13px;color:rgba(255,255,255,0.5);font-weight:600;">AI Idea Validator</span>
+            </div>
+        </header>
+
+        <div class="app-container animate-fade-in">
+            <aside class="evidence-sidebar glassmorphism">
+                <h3>CHAIN OF EVIDENCE</h3>
+                <div class="evidence-chain" id="evidence-chain"></div>
+            </aside>
+
+            <main class="validator-panel glassmorphism" id="wizard-panel">
+                <div class="panel-header chat-header">
+                    <span class="panel-tag" id="round-tag">ROUND 1: CAUSAL MAPPING</span>
+                    <h1 id="wizard-title">SMOKESCAN <span class="badge">7+7</span></h1>
+                </div>
+                <div id="chat-history" class="chat-history">
+                    <div class="ai-bubble first-msg">
+                        <p>Hola, soy SmokeScan. Vamos a validar tu idea con el M\u00e9todo 7+7\u2122.</p>
+                        <p>Para empezar, \u00bfcu\u00e1l es el nombre de tu proyecto?</p>
+                    </div>
+                </div>
+                <div id="chat-input-area" class="chat-input-area">
+                    <div class="input-wrapper">
+                        <textarea id="user-input" rows="1" placeholder="Escribe tu respuesta aqu\u00ed..."></textarea>
+                        <button type="button" id="send-btn" class="send-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                        </button>
+                    </div>
+                    <div id="typing-indicator" class="typing-indicator hidden">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <div id="finalize-step" class="hidden finalize-container">
+                    <button type="button" class="btn-primary-ss" id="finalize-btn">VER DIAGN\u00d3STICO FINAL</button>
+                </div>
+            </main>
+
+            <aside class="dashboard-panel glassmorphism" id="dashboard">
+                <div id="loading-overlay" class="hidden">
+                    <div class="spinner"></div>
+                    <p>AI is querying and validating...</p>
+                    <small class="loading-status">Analyzing Market Data</small>
+                </div>
+                <div id="clarification-panel" class="hidden">
+                    <h2>\u26a0\ufe0f MORE INFORMATION REQUIRED</h2>
+                    <p class="clarification-desc">The idea is too ambiguous to evaluate with mathematical precision. Clarify the following points:</p>
+                    <div id="questions-container" class="mt-1"></div>
+                    <button type="button" class="btn-primary-ss" id="submit-answers-btn" style="margin-top: 15px;">SUBMIT ANSWERS</button>
+                </div>
+                <div id="results-panel">
+                    <div class="results-header"><h2>AI ANALYSIS & SCORING</h2></div>
+                    <div class="dashboard-grid">
+                        <div class="gauge-card">
+                            <div class="gauge-wrapper" style="height: 65px; width: 130px;">
+                                <svg viewBox="0 0 100 50" class="gauge-svg">
+                                    <path class="gauge-bg" d="M 10,50 A 40,40 0 0,1 90,50" />
+                                    <path class="gauge-fill" id="risk-gauge" d="M 10,50 A 40,40 0 0,1 90,50" style="stroke-dasharray: 125.6; stroke-dashoffset: 125.6;"/>
+                                </svg>
+                                <div class="gauge-center">
+                                    <span class="risk-label">REAL RISK</span>
+                                    <h3 id="risk-percentage">--%</h3>
+                                    <span class="risk-status" id="risk-status">-</span>
+                                </div>
+                            </div>
+                            <div class="gauge-labels"><span>Low</span><span>High</span></div>
+                        </div>
+                        <div class="score-card">
+                            <div class="score-info">
+                                <span>Validation Score</span>
+                                <h2><span id="validation-score">--</span><small>/100</small></h2>
+                            </div>
+                            <div class="score-bars" id="score-bars"></div>
+                        </div>
+                    </div>
+                    <div class="metrics-grid">
+                        <div class="metric-card"><span>Potential</span><h3 id="market-potential">--</h3><div class="stars" id="market-stars">-----</div></div>
+                        <div class="metric-card"><span>Tech Feasibility</span><h3 id="tech-feasibility">--</h3><span class="status-excellent" id="tech-status">-</span></div>
+                        <div class="metric-card competition"><span>Competition</span><h3 id="competition-level">--</h3><div class="competition-bar"><div class="competition-fill" id="competition-fill"></div></div></div>
+                    </div>
+                    <div class="scenarios-container rubric-section">
+                        <h3>\ud83d\udcca WEIGHTED RUBRIC (PONDERADA)</h3>
+                        <div class="rubric-grid" id="rubric-grid">
+                            <div class="rubric-item"><div class="rubric-info"><span>Market Clarity</span><small id="val-market_clarity">0/10</small></div><div class="rubric-bar-bg"><div class="rubric-bar-fill" id="bar-market_clarity" style="width: 0%"></div></div></div>
+                            <div class="rubric-item"><div class="rubric-info"><span>Tech Maturity</span><small id="val-tech_feasibility">0/10</small></div><div class="rubric-bar-bg"><div class="rubric-bar-fill" id="bar-tech_feasibility" style="width: 0%"></div></div></div>
+                            <div class="rubric-item"><div class="rubric-info"><span>Competition (Inverse)</span><small id="val-competition_intensity">0/10</small></div><div class="rubric-bar-bg"><div class="rubric-bar-fill" id="bar-competition_intensity" style="width: 0%"></div></div></div>
+                            <div class="rubric-item"><div class="rubric-info"><span>MVP Simplicity</span><small id="val-mvp_simplicity">0/10</small></div><div class="rubric-bar-bg"><div class="rubric-bar-fill" id="bar-mvp_simplicity" style="width: 0%"></div></div></div>
+                            <div class="rubric-item"><div class="rubric-info"><span>Regulatory Ease</span><small id="val-regulatory_risk">0/10</small></div><div class="rubric-bar-bg"><div class="rubric-bar-fill" id="bar-regulatory_risk" style="width: 0%"></div></div></div>
+                            <div class="rubric-item"><div class="rubric-info"><span>Demand Strength</span><small id="val-demand_strength">0/10</small></div><div class="rubric-bar-bg"><div class="rubric-bar-fill" id="bar-demand_strength" style="width: 0%"></div></div></div>
+                        </div>
+                    </div>
+                    <div class="metrics-grid">
+                        <div class="metric-card full-width"><span>Estimated Investment (MVP)</span><h3 id="investment-estimate" class="accent-text">--</h3></div>
+                        <div class="metric-card full-width"><span>Cash Flow Projection</span><p id="cash-flow-projection" class="sm-text">--</p></div>
+                    </div>
+                    <div class="scenarios-container">
+                        <h3>\ud83d\udcc8 PROBABLE SCENARIOS</h3>
+                        <div class="scenarios-grid">
+                            <div class="scenario-box optimistic"><span class="scenario-title">Optimistic</span><p id="scenario-opt">--</p></div>
+                            <div class="scenario-box neutral"><span class="scenario-title">Base / Neutral</span><p id="scenario-neu">--</p></div>
+                            <div class="scenario-box pessimistic"><span class="scenario-title">Pessimistic</span><p id="scenario-pes">--</p></div>
+                        </div>
+                    </div>
+                    <div class="mitigation-card hidden" id="mitigation-card">
+                        <h3>\u26a0\ufe0f MITIGATION PLAN</h3>
+                        <ul id="mitigation-list"></ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="/app.js"></script>
+</body>
+</html>
