@@ -11,13 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const chatHistory = document.getElementById("chat-history");
     const userInput = document.getElementById("user-input");
     const sendBtn = document.getElementById("send-btn");
-    const typingIndicator = document.getElementById("typing-indicator");
     const finalizeStep = document.getElementById("finalize-step");
     const finalizeBtn = document.getElementById("finalize-btn");
     const resultsAside = document.getElementById("dashboard");
-    const loadingOverlay = document.getElementById("loading-overlay");
-    const evidenceChain = document.getElementById("evidence-chain");
-    const roundTag = document.getElementById("round-tag");
+    const processingBox = document.getElementById("processing-box");
 
     // --- INIT ---
     fetch("/api/questions/r1")
@@ -75,7 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- AI REPLIES ---
     async function askNextR1() {
         const q = r1Questions[currentStep - 1];
-        roundTag.textContent = "RONDA 1: PREGUNTA " + currentStep + "/7";
         await aiReply(q.q);
     }
 
@@ -94,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 await aiReply("Excelente. No he detectado inconsistencias graves. Estamos listos para el diagn\u00f3stico final.");
                 showFinalize();
             } else {
-                roundTag.textContent = "RONDA 2: PERFORACI\u00d3N";
                 await aiReply("He detectado " + r2Followups.length + " puntos que necesitan m\u00e1s profundidad. Vamos uno por uno.");
                 askNextR2();
             }
@@ -122,8 +117,30 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- UI HELPERS ---
     function addMessage(role, text) {
         const div = document.createElement("div");
-        div.className = role + "-bubble";
-        div.innerHTML = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+        const formattedText = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+        
+        if (role === 'ai') {
+            div.className = "ai-message";
+            let stepTitle = currentStep > 0 ? "Step " + currentStep + ": " + (currentStep <= 7 ? "Contextual Analysis" : "Deep Drill") : "Initialization";
+            div.innerHTML = `
+                <div class="ai-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+                </div>
+                <div class="ai-card">
+                    <h4>${stepTitle}</h4>
+                    <p>${formattedText}</p>
+                </div>
+            `;
+        } else {
+            div.className = "user-message";
+            div.innerHTML = `
+                <div class="user-card">${formattedText}</div>
+                <div class="user-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>
+            `;
+        }
+        
         chatHistory.appendChild(div);
         chatHistory.scrollTop = chatHistory.scrollHeight;
     }
@@ -138,8 +155,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function setTyping(val) {
         isTyping = val;
-        if (val) typingIndicator.classList.remove("hidden");
-        else typingIndicator.classList.add("hidden");
+        if (processingBox) {
+            if (val) {
+                processingBox.classList.remove("hidden");
+                chatHistory.appendChild(processingBox); // Move to bottom
+            } else {
+                processingBox.classList.add("hidden");
+            }
+        }
         chatHistory.scrollTop = chatHistory.scrollHeight;
     }
 
@@ -151,15 +174,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function renderSidebar() {
-        evidenceChain.innerHTML = "";
-        r1Questions.forEach((q, i) => {
-            const step = document.createElement("div");
-            const isCompleted = r1Answers[i] !== "";
-            const isActive = (i === currentStep - 1);
-            step.className = "chain-step " + (isActive ? "active" : "") + " " + (isCompleted ? "completed" : "");
-            step.innerHTML = '<div class="step-num">' + (i + 1) + '</div><div class="step-label">' + q.q.substring(0, 25) + '...</div>';
-            evidenceChain.appendChild(step);
-        });
+        // Map 14 steps to the 5 visual steps
+        let activeBadge = 1;
+        if (currentStep > 2) activeBadge = 2;
+        if (currentStep > 5) activeBadge = 3;
+        if (currentStep > 8) activeBadge = 4;
+        if (currentStep > 11) activeBadge = 5;
+        
+        for (let i = 1; i <= 5; i++) {
+            const stepEl = document.getElementById("step-" + i);
+            if (stepEl) {
+                if (i <= activeBadge) stepEl.classList.add("active");
+                else stepEl.classList.remove("active");
+            }
+        }
     }
 
     // --- FINALIZE ---
