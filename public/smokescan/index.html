@@ -112,6 +112,12 @@
                     </div>
                 </div>
 
+                <!-- ==================== FINALIZE ==================== -->
+                <div id="finalize-step" class="hidden finalize-container" style="text-align: center; margin: 20px 0;">
+                    <p style="color: var(--text-muted); margin-bottom: 10px;">Analysis complete. Generate final report?</p>
+                    <button type="button" class="btn-primary-ss" id="finalize-btn" style="background: var(--button-pink); color: #000; border: none; padding: 12px 24px; border-radius: 8px; font-weight: 700; cursor: pointer;">VER DIAGNÓSTICO FINAL</button>
+                </div>
+
                 <!-- ==================== INPUT AREA ==================== -->
                 <div class="input-area">
                     <div class="input-box">
@@ -125,8 +131,68 @@
                 </div>
             </main>
             
-            <aside class="dashboard-panel hidden" id="dashboard">
-                <!-- Original dashboard metrics can optionally render here if needed, but per the image, everything happens in chat. We'll leave it hidden or populate it inside the chat later. -->
+            <aside class="dashboard-panel hidden" id="dashboard" style="display:none; padding: 24px; overflow-y: auto; flex: 1;">
+                <div id="results-panel">
+                    <div class="results-header" style="margin-bottom: 24px;"><h2>AI ANALYSIS &amp; SCORING</h2></div>
+                    <div class="dashboard-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px;">
+                        <div class="gauge-card" style="background: var(--card-bg); padding: 16px; border: 1px solid var(--border-color); border-radius: 12px;">
+                            <span class="risk-label" style="font-size: 12px; color: var(--text-muted);">REAL RISK</span>
+                            <h3 id="risk-percentage" style="font-size: 24px; color: var(--button-pink); margin: 8px 0;">--%</h3>
+                            <span class="risk-status" id="risk-status" style="font-size: 14px; color: var(--text-main);">-</span>
+                        </div>
+                        <div class="score-card" style="background: var(--card-bg); padding: 16px; border: 1px solid var(--border-color); border-radius: 12px;">
+                            <span style="font-size: 12px; color: var(--text-muted);">Validation Score</span>
+                            <h2 style="font-size: 32px; color: var(--white); margin: 8px 0;"><span id="validation-score">--</span><small style="font-size: 16px; color: var(--text-muted);">/100</small></h2>
+                        </div>
+                    </div>
+                    <div class="metrics-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-bottom: 24px;">
+                        <div class="metric-card" style="background: var(--card-bg); padding: 16px; border: 1px solid var(--border-color); border-radius: 12px;">
+                            <span style="font-size: 12px; color: var(--text-muted);">Potential</span>
+                            <h3 id="market-potential" style="font-size: 18px; color: var(--white); margin: 8px 0;">--</h3>
+                            <div class="stars" id="market-stars" style="color: #FFD700; font-size: 18px;">-----</div>
+                        </div>
+                        <div class="metric-card" style="background: var(--card-bg); padding: 16px; border: 1px solid var(--border-color); border-radius: 12px;">
+                            <span style="font-size: 12px; color: var(--text-muted);">Tech Feasibility</span>
+                            <h3 id="tech-feasibility" style="font-size: 18px; color: var(--white); margin: 8px 0;">--</h3>
+                            <span id="tech-status" style="color: var(--text-muted);">-</span>
+                        </div>
+                        <div class="metric-card" style="background: var(--card-bg); padding: 16px; border: 1px solid var(--border-color); border-radius: 12px;">
+                            <span style="font-size: 12px; color: var(--text-muted);">Competition</span>
+                            <h3 id="competition-level" style="font-size: 18px; color: var(--white); margin: 8px 0;">--</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="rubric-section" style="margin-bottom: 24px;">
+                        <h3 style="font-size: 16px; color: var(--white); margin-bottom: 16px;">📊 WEIGHTED RUBRIC</h3>
+                        <div class="rubric-grid" style="display: grid; gap: 12px;">
+                            <div class="rubric-item"><div style="display:flex; justify-content:space-between; margin-bottom:4px;"><span style="color:var(--text-main); font-size:14px;">Market Clarity</span><small id="val-market_clarity" style="color:var(--text-muted);">0/10</small></div><div style="height:6px; background:var(--bg-dark); border-radius:3px;"><div id="bar-market_clarity" style="height:100%; background:var(--blue-light); width:0%; border-radius:3px;"></div></div></div>
+                            <div class="rubric-item"><div style="display:flex; justify-content:space-between; margin-bottom:4px;"><span style="color:var(--text-main); font-size:14px;">Tech Maturity</span><small id="val-tech_feasibility" style="color:var(--text-muted);">0/10</small></div><div style="height:6px; background:var(--bg-dark); border-radius:3px;"><div id="bar-tech_feasibility" style="height:100%; background:var(--blue-light); width:0%; border-radius:3px;"></div></div></div>
+                            <div class="rubric-item"><div style="display:flex; justify-content:space-between; margin-bottom:4px;"><span style="color:var(--text-main); font-size:14px;">Competition (Inverse)</span><small id="val-competition_intensity" style="color:var(--text-muted);">0/10</small></div><div style="height:6px; background:var(--bg-dark); border-radius:3px;"><div id="bar-competition_intensity" style="height:100%; background:var(--blue-light); width:0%; border-radius:3px;"></div></div></div>
+                            <div class="rubric-item"><div style="display:flex; justify-content:space-between; margin-bottom:4px;"><span style="color:var(--text-main); font-size:14px;">MVP Simplicity</span><small id="val-mvp_simplicity" style="color:var(--text-muted);">0/10</small></div><div style="height:6px; background:var(--bg-dark); border-radius:3px;"><div id="bar-mvp_simplicity" style="height:100%; background:var(--blue-light); width:0%; border-radius:3px;"></div></div></div>
+                            <div class="rubric-item"><div style="display:flex; justify-content:space-between; margin-bottom:4px;"><span style="color:var(--text-main); font-size:14px;">Regulatory Ease</span><small id="val-regulatory_risk" style="color:var(--text-muted);">0/10</small></div><div style="height:6px; background:var(--bg-dark); border-radius:3px;"><div id="bar-regulatory_risk" style="height:100%; background:var(--blue-light); width:0%; border-radius:3px;"></div></div></div>
+                            <div class="rubric-item"><div style="display:flex; justify-content:space-between; margin-bottom:4px;"><span style="color:var(--text-main); font-size:14px;">Demand Strength</span><small id="val-demand_strength" style="color:var(--text-muted);">0/10</small></div><div style="height:6px; background:var(--bg-dark); border-radius:3px;"><div id="bar-demand_strength" style="height:100%; background:var(--blue-light); width:0%; border-radius:3px;"></div></div></div>
+                        </div>
+                    </div>
+                    
+                    <div class="metrics-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px;">
+                        <div class="metric-card" style="background: var(--card-bg); padding: 16px; border: 1px solid var(--border-color); border-radius: 12px;"><span style="font-size: 12px; color: var(--text-muted);">Estimated Investment (MVP)</span><h3 id="investment-estimate" style="font-size: 20px; color: var(--blue-light); margin: 8px 0;">--</h3></div>
+                        <div class="metric-card" style="background: var(--card-bg); padding: 16px; border: 1px solid var(--border-color); border-radius: 12px;"><span style="font-size: 12px; color: var(--text-muted);">Cash Flow Projection</span><p id="cash-flow-projection" style="font-size: 14px; color: var(--white); margin: 8px 0;">--</p></div>
+                    </div>
+                    
+                    <div class="scenarios-container" style="margin-bottom: 24px;">
+                        <h3 style="font-size: 16px; color: var(--white); margin-bottom: 16px;">📈 PROBABLE SCENARIOS</h3>
+                        <div class="scenarios-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                            <div class="scenario-box" style="padding: 16px; background: rgba(0,255,100,0.05); border: 1px solid rgba(0,255,100,0.2); border-radius: 8px;"><span style="color: #00ff66; font-size: 14px; font-weight: bold;">Optimistic</span><p id="scenario-opt" style="font-size: 14px; color: var(--text-main); margin-top: 8px;">--</p></div>
+                            <div class="scenario-box" style="padding: 16px; background: rgba(98,132,255,0.05); border: 1px solid rgba(98,132,255,0.2); border-radius: 8px;"><span style="color: var(--blue-light); font-size: 14px; font-weight: bold;">Base / Neutral</span><p id="scenario-neu" style="font-size: 14px; color: var(--text-main); margin-top: 8px;">--</p></div>
+                            <div class="scenario-box" style="padding: 16px; background: rgba(255,92,147,0.05); border: 1px solid rgba(255,92,147,0.2); border-radius: 8px;"><span style="color: var(--button-pink); font-size: 14px; font-weight: bold;">Pessimistic</span><p id="scenario-pes" style="font-size: 14px; color: var(--text-main); margin-top: 8px;">--</p></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mitigation-card hidden" id="mitigation-card" style="background: rgba(255,255,0,0.05); border: 1px solid rgba(255,255,0,0.2); padding: 20px; border-radius: 12px;">
+                        <h3 style="font-size: 16px; color: #FFD700; margin-bottom: 16px;">⚠️ MITIGATION PLAN</h3>
+                        <ul id="mitigation-list" style="color: var(--text-main); padding-left: 20px; font-size: 14px; line-height: 1.6;"></ul>
+                    </div>
+                </div>
             </aside>
         </div>
     </div>

@@ -167,9 +167,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function showFinalize() {
-        const inputArea = document.getElementById("chat-input-area");
-        if (inputArea) inputArea.classList.add("hidden");
-        finalizeStep.classList.remove("hidden");
+        const inputArea = document.querySelector(".input-area");
+        if (inputArea) inputArea.style.display = "none";
+        if (finalizeStep) finalizeStep.classList.remove("hidden");
         currentStep = 9;
     }
 
@@ -192,9 +192,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- FINALIZE ---
     finalizeBtn.addEventListener("click", async () => {
-        loadingOverlay.classList.remove("hidden");
-        resultsAside.style.display = "block";
-        document.getElementById("wizard-panel").classList.add("hidden");
+        finalizeBtn.textContent = "GENERATING REPORT...";
+        finalizeBtn.disabled = true;
 
         const payload = {
             projectName,
@@ -211,12 +210,18 @@ document.addEventListener("DOMContentLoaded", () => {
             if (data.error) {
                 alert("Error del servidor: " + data.error);
             } else {
+                document.querySelector(".chat-container").style.display = "none";
+                if (resultsAside) {
+                    resultsAside.style.display = "block";
+                    resultsAside.classList.remove("hidden");
+                }
                 updateDashboard(data);
             }
         } catch (e) {
             alert("Error de conexi\u00f3n con el servidor.");
         } finally {
-            loadingOverlay.classList.add("hidden");
+            finalizeBtn.textContent = "VER DIAGNÓSTICO FINAL";
+            finalizeBtn.disabled = false;
         }
     });
 
