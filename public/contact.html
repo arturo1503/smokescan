@@ -1,195 +1,428 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3N6X4DN8QR"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-3N6X4DN8QR");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SmokeStudio | Contact</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="orb-right animate-up" style="top: 0; left: auto; right: -10%;"></div>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      class="orb-right animate-up"
+      style="top: 0; left: auto; right: -10%"
+    ></div>
 
     <nav id="navbar" class="animate-up">
-        <a href="index.html" class="logo" style="display:flex; align-items:center; gap:8px; text-decoration:none;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="url(#brandGrad)"/><defs><linearGradient id="brandGrad" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs></svg>
-            <span style="color:white; font-size:1.4rem; font-weight:800; letter-spacing:-0.5px;">Smoke<span style="font-weight:400; color:var(--text-secondary);">Studio</span></span>
-        </a>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="about.html">About Us</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html" class="btn-capsule active" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.3);">Contact Us</a>
-        </div>
+      <a
+        href="index.html"
+        class="logo"
+        style="
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          text-decoration: none;
+        "
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" fill="url(#brandGrad)" />
+          <defs>
+            <linearGradient id="brandGrad" x1="0" y1="0" x2="24" y2="24">
+              <stop stop-color="#8b5cf6" />
+              <stop offset="1" stop-color="#ec4899" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span
+          style="
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+          "
+          >Smoke<span style="font-weight: 400; color: var(--text-secondary)"
+            >Studio</span
+          ></span
+        >
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Us</a>
+        <a href="blog.html">Blog</a>
+        <a
+          href="contact.html"
+          class="btn-capsule active"
+          style="
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+          "
+          >Contact Us</a
+        >
+      </div>
     </nav>
 
     <!-- 1. Hero Section -->
-    <section class="hero text-center animate-up delay-100" style="min-height: 50vh; padding-bottom: 2rem;">
-        <span class="overhead">Let's talk</span>
-        <h1>Real validation awaits.</h1>
-        <p class="lead">Tell us about your fintech challenge, and we’ll help you make informed decisions.</p>
-        
-        <div class="actions" style="display: flex; gap: 1rem; justify-content: center;">
-            <a href="#form-section" class="btn-primary">Contact</a>
-            <a href="services.html" class="btn-capsule">Explore</a>
-        </div>
+    <section
+      class="hero text-center animate-up delay-100"
+      style="min-height: 50vh; padding-bottom: 2rem"
+    >
+      <span class="overhead">Let's talk</span>
+      <h1>Real validation awaits.</h1>
+      <p class="lead">
+        Tell us about your fintech challenge, and we’ll help you make informed
+        decisions.
+      </p>
+
+      <div
+        class="actions"
+        style="display: flex; gap: 1rem; justify-content: center"
+      >
+        <a href="#form-section" class="btn-primary">Contact</a>
+        <a href="services.html" class="btn-capsule">Explore</a>
+      </div>
     </section>
 
     <!-- 2. Form Section & Direct Info -->
-    <section id="form-section" class="animate-up delay-200" style="padding-top: 2rem;">
-        <div class="grid-2-form">
-            
-            <div class="card">
-                <span class="overhead" style="color: var(--text-secondary);">Let's Talk</span>
-                <h3 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Tell us about your challenge.</h3>
-                <p style="margin-bottom: 2rem;">Fill out the form below, and we will get back to you within 24 hours.</p>
-                
-                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message Sent. We will contact you soon.');">
-                    <div style="display: flex; gap: 1rem;">
-                        <div class="form-group" style="flex: 1;">
-                            <label>First Name</label>
-                            <input type="text" placeholder="John" required>
-                        </div>
-                        <div class="form-group" style="flex: 1;">
-                            <label>Last Name</label>
-                            <input type="text" placeholder="Doe" required>
-                        </div>
-                    </div>
+    <section
+      id="form-section"
+      class="animate-up delay-200"
+      style="padding-top: 2rem"
+    >
+      <div class="grid-2-form">
+        <div class="card">
+          <span class="overhead" style="color: var(--text-secondary)"
+            >Let's Talk</span
+          >
+          <h3 style="font-size: 2.2rem; margin-bottom: 0.5rem">
+            Tell us about your challenge.
+          </h3>
+          <p style="margin-bottom: 2rem">
+            Fill out the form below, and we will get back to you within 24
+            hours.
+          </p>
 
-                    <div style="display: flex; gap: 1rem;">
-                        <div class="form-group" style="flex: 1;">
-                            <label>Email</label>
-                            <input type="email" placeholder="john@company.com" required>
-                        </div>
-                        <div class="form-group" style="flex: 1;">
-                            <label>Phone</label>
-                            <input type="tel" placeholder="+1 234 567 8900">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>What brings you here?</label>
-                        <select required style="appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem top 50%; background-size: 0.65rem auto;">
-                            <option value="" disabled selected>Select an option</option>
-                            <option value="research">Validate a new idea (Research)</option>
-                            <option value="mvp">Build a fast MVP</option>
-                            <option value="pivot">Need to pivot my product</option>
-                            <option value="other">Other consulting</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>What stage are you at?</label>
-                        <select required style="appearance: none; background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 1rem top 50%; background-size: 0.65rem auto;">
-                            <option value="" disabled selected>Select your stage</option>
-                            <option value="early">Early Idea</option>
-                            <option value="prototype">Existing Prototype</option>
-                            <option value="launched">Launched Product</option>
-                            <option value="pivot">Pivot Needed</option>
-                            <option value="more">More mature</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Message</label>
-                        <textarea placeholder="Tell us more about your challenge..." rows="4" required></textarea>
-                    </div>
-
-                    <div class="checkbox-line" style="margin-bottom: 2rem;">
-                        <input type="checkbox" id="privacy" required>
-                        <label for="privacy" style="font-size: 0.85rem; color: var(--text-secondary);">I accept the privacy terms.</label>
-                    </div>
-
-                    <button type="submit" class="btn-primary" style="width: 100%; border-radius: 12px; font-size: 1.1rem;">Send</button>
-                </form>
+          <form
+            action="#"
+            method="POST"
+            onsubmit="
+              event.preventDefault();
+              alert('Message Sent. We will contact you soon.');
+            "
+          >
+            <div style="display: flex; gap: 1rem">
+              <div class="form-group" style="flex: 1">
+                <label>First Name</label>
+                <input type="text" placeholder="John" required />
+              </div>
+              <div class="form-group" style="flex: 1">
+                <label>Last Name</label>
+                <input type="text" placeholder="Doe" required />
+              </div>
             </div>
 
-            <div>
-                <!-- Direct Contact Info -->
-                <div style="margin-bottom: 4rem;">
-                    <span class="overhead" style="color: var(--text-secondary);">Contact</span>
-                    <h3 style="font-size: 2rem; margin-bottom: 1rem;">Talk to us directly.</h3>
-                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">Answer our questions and we’ll connect shortly.</p>
-                    
-                    <ul style="list-style: none;">
-                        <li style="margin-bottom: 1.5rem;">
-                            <div style="font-weight: 700; color: white;">Email</div>
-                            <div style="color: var(--text-secondary); margin-bottom: 0.25rem;">Send your inquiry anytime.</div>
-                            <a href="mailto:hola@smokestudio.com" style="color: var(--accent); font-weight: 500; text-decoration: none;">hola@smokestudio.com</a>
-                        </li>
-                        <li style="margin-bottom: 1.5rem;">
-                            <div style="font-weight: 700; color: white;">Phone</div>
-                            <div style="color: var(--text-secondary); margin-bottom: 0.25rem;">Direct calls Monday to Friday.</div>
-                            <a href="tel:+56912345678" style="color: var(--accent); font-weight: 500; text-decoration: none;">+56 9 1234 5678</a>
-                        </li>
-                        <li style="margin-bottom: 1.5rem;">
-                            <div style="font-weight: 700; color: white;">Office</div>
-                            <div style="color: var(--text-secondary); margin-bottom: 0.25rem;">Visit us for a face-to-face chat.</div>
-                            <div style="color: var(--accent); font-weight: 500;">Santiago, Chile</div>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter -->
-                <div class="card" style="background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.2); padding: 2.5rem;">
-                    <h4 style="font-size: 1.5rem; margin-bottom: 1rem;">Stay informed.</h4>
-                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">Receive strategic insights on validation, experimentation, and evidence-based decisions directly in your inbox.</p>
-                    <form onsubmit="event.preventDefault(); alert('Subscribed successfully!');" style="margin-top: 0;">
-                        <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
-                            <input type="email" placeholder="Your email" required style="margin: 0; flex: 1; padding: 0.8rem 1rem;">
-                            <button type="submit" class="btn-primary" style="padding: 0.8rem 1.5rem; border-radius: 12px;">Subscribe</button>
-                        </div>
-                        <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4); line-height: 1.4;">By subscribing, you agree to receive content about validation and methodology. You can unsubscribe at any time.</div>
-                    </form>
-                </div>
+            <div style="display: flex; gap: 1rem">
+              <div class="form-group" style="flex: 1">
+                <label>Email</label>
+                <input type="email" placeholder="john@company.com" required />
+              </div>
+              <div class="form-group" style="flex: 1">
+                <label>Phone</label>
+                <input type="tel" placeholder="+1 234 567 8900" />
+              </div>
             </div>
+
+            <div class="form-group">
+              <label>What brings you here?</label>
+              <select
+                required
+                style="
+                  appearance: none;
+                  background-image: url(&quot;data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E&quot;);
+                  background-repeat: no-repeat;
+                  background-position: right 1rem top 50%;
+                  background-size: 0.65rem auto;
+                "
+              >
+                <option value="" disabled selected>Select an option</option>
+                <option value="research">Validate a new idea (Research)</option>
+                <option value="mvp">Build a fast MVP</option>
+                <option value="pivot">Need to pivot my product</option>
+                <option value="other">Other consulting</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>What stage are you at?</label>
+              <select
+                required
+                style="
+                  appearance: none;
+                  background-image: url(&quot;data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E&quot;);
+                  background-repeat: no-repeat;
+                  background-position: right 1rem top 50%;
+                  background-size: 0.65rem auto;
+                "
+              >
+                <option value="" disabled selected>Select your stage</option>
+                <option value="early">Early Idea</option>
+                <option value="prototype">Existing Prototype</option>
+                <option value="launched">Launched Product</option>
+                <option value="pivot">Pivot Needed</option>
+                <option value="more">More mature</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Message</label>
+              <textarea
+                placeholder="Tell us more about your challenge..."
+                rows="4"
+                required
+              ></textarea>
+            </div>
+
+            <div class="checkbox-line" style="margin-bottom: 2rem">
+              <input type="checkbox" id="privacy" required />
+              <label
+                for="privacy"
+                style="font-size: 0.85rem; color: var(--text-secondary)"
+                >I accept the privacy terms.</label
+              >
+            </div>
+
+            <button
+              type="submit"
+              class="btn-primary"
+              style="width: 100%; border-radius: 12px; font-size: 1.1rem"
+            >
+              Send
+            </button>
+          </form>
         </div>
+
+        <div>
+          <!-- Direct Contact Info -->
+          <div style="margin-bottom: 4rem">
+            <span class="overhead" style="color: var(--text-secondary)"
+              >Contact</span
+            >
+            <h3 style="font-size: 2rem; margin-bottom: 1rem">
+              Talk to us directly.
+            </h3>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem">
+              Answer our questions and we’ll connect shortly.
+            </p>
+
+            <ul style="list-style: none">
+              <li style="margin-bottom: 1.5rem">
+                <div style="font-weight: 700; color: white">Email</div>
+                <div
+                  style="color: var(--text-secondary); margin-bottom: 0.25rem"
+                >
+                  Send your inquiry anytime.
+                </div>
+                <a
+                  href="mailto:hola@smokestudio.com"
+                  style="
+                    color: var(--accent);
+                    font-weight: 500;
+                    text-decoration: none;
+                  "
+                  >hola@smokestudio.com</a
+                >
+              </li>
+              <li style="margin-bottom: 1.5rem">
+                <div style="font-weight: 700; color: white">Phone</div>
+                <div
+                  style="color: var(--text-secondary); margin-bottom: 0.25rem"
+                >
+                  Direct calls Monday to Friday.
+                </div>
+                <a
+                  href="tel:+56912345678"
+                  style="
+                    color: var(--accent);
+                    font-weight: 500;
+                    text-decoration: none;
+                  "
+                  >+56 9 1234 5678</a
+                >
+              </li>
+              <li style="margin-bottom: 1.5rem">
+                <div style="font-weight: 700; color: white">Office</div>
+                <div
+                  style="color: var(--text-secondary); margin-bottom: 0.25rem"
+                >
+                  Visit us for a face-to-face chat.
+                </div>
+                <div style="color: var(--accent); font-weight: 500">
+                  Santiago, Chile
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div
+            class="card"
+            style="
+              background: rgba(139, 92, 246, 0.05);
+              border: 1px solid rgba(139, 92, 246, 0.2);
+              padding: 2.5rem;
+            "
+          >
+            <h4 style="font-size: 1.5rem; margin-bottom: 1rem">
+              Stay informed.
+            </h4>
+            <p
+              style="
+                color: var(--text-secondary);
+                margin-bottom: 1.5rem;
+                font-size: 0.95rem;
+              "
+            >
+              Receive strategic insights on validation, experimentation, and
+              evidence-based decisions directly in your inbox.
+            </p>
+            <form
+              onsubmit="
+                event.preventDefault();
+                alert('Subscribed successfully!');
+              "
+              style="margin-top: 0"
+            >
+              <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  required
+                  style="margin: 0; flex: 1; padding: 0.8rem 1rem"
+                />
+                <button
+                  type="submit"
+                  class="btn-primary"
+                  style="padding: 0.8rem 1.5rem; border-radius: 12px"
+                >
+                  Subscribe
+                </button>
+              </div>
+              <div
+                style="
+                  font-size: 0.75rem;
+                  color: rgba(255, 255, 255, 0.4);
+                  line-height: 1.4;
+                "
+              >
+                By subscribing, you agree to receive content about validation
+                and methodology. You can unsubscribe at any time.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- 5. Final CTA -->
-    <section class="text-center animate-up delay-300" style="padding: 6rem 5% 8rem 5%;">
-        <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem;">Reduce your risk today.</h2>
-        <p class="lead" style="margin-bottom: 2.5rem;">Book a strategic session and discover how to validate your idea with real market evidence.</p>
-        <div style="display: flex; gap: 1rem; justify-content: center;">
-            <a href="#" class="btn-primary">Book Now</a>
-            <a href="https://smokescan-mvp.loca.lt" class="btn-capsule">Try Idea Validator</a>
-        </div>
+    <section
+      class="text-center animate-up delay-300"
+      style="padding: 6rem 5% 8rem 5%"
+    >
+      <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem">
+        Reduce your risk today.
+      </h2>
+      <p class="lead" style="margin-bottom: 2.5rem">
+        Book a strategic session and discover how to validate your idea with
+        real market evidence.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center">
+        <a href="#" class="btn-primary">Book Now</a>
+        <a href="https://smokescan-mvp.loca.lt" class="btn-capsule"
+          >Try Idea Validator</a
+        >
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-grid">
-            <div class="footer-col" style="padding-right: 2rem;">
-                <div class="logo" style="display:flex; align-items:center; gap:8px; text-decoration:none; margin-bottom:1.5rem;">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="url(#brandGradFoo)"/><defs><linearGradient id="brandGradFoo" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs></svg>
-                    <span style="color:white; font-size:1.4rem; font-weight:800; letter-spacing:-0.5px;">Smoke<span style="font-weight:400; color:var(--text-secondary);">Studio</span></span>
-                </div>
-                <p style="color: var(--text-secondary); line-height: 1.6;">We accelerate your learning curve and minimize your financial risk at every digital stage of your business.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Platform</h4>
-                <a href="https://smokescan-mvp.loca.lt">Idea Validator</a>
-                <a href="services.html">Services</a>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <a href="about.html">About Us</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact Us</a>
-            </div>
+      <div class="footer-grid">
+        <div class="footer-col" style="padding-right: 2rem">
+          <div
+            class="logo"
+            style="
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              text-decoration: none;
+              margin-bottom: 1.5rem;
+            "
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" fill="url(#brandGradFoo)" />
+              <defs>
+                <linearGradient id="brandGradFoo" x1="0" y1="0" x2="24" y2="24">
+                  <stop stop-color="#8b5cf6" />
+                  <stop offset="1" stop-color="#ec4899" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <span
+              style="
+                color: white;
+                font-size: 1.4rem;
+                font-weight: 800;
+                letter-spacing: -0.5px;
+              "
+              >Smoke<span style="font-weight: 400; color: var(--text-secondary)"
+                >Studio</span
+              ></span
+            >
+          </div>
+          <p style="color: var(--text-secondary); line-height: 1.6">
+            We accelerate your learning curve and minimize your financial risk
+            at every digital stage of your business.
+          </p>
         </div>
-        <div class="footer-bottom">
-            &copy; 2026 Smoke Studio. All rights reserved.
+        <div class="footer-col">
+          <h4>Platform</h4>
+          <a href="https://smokescan-mvp.loca.lt">Idea Validator</a>
+          <a href="services.html">Services</a>
         </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Smoke Studio. All rights reserved.
+      </div>
     </footer>
 
     <script>
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            if (window.scrollY > 50) nav.classList.add('scrolled');
-            else nav.classList.remove('scrolled');
-        });
+      window.addEventListener("scroll", () => {
+        const nav = document.getElementById("navbar");
+        if (window.scrollY > 50) nav.classList.add("scrolled");
+        else nav.classList.remove("scrolled");
+      });
     </script>
-</body>
+  </body>
 </html>

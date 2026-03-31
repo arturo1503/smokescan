@@ -1,375 +1,733 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Validate your fintech idea before investing capital. Our AI-powered experiments are fast, rigorous, and designed to radically reduce your risk.">
-  <title>SmokeStudio — Validate your fintech idea</title>
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="landing.css?v=2">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Validate your fintech idea before investing capital. Our AI-powered experiments are fast, rigorous, and designed to radically reduce your risk."
+    />
+    <title>SmokeStudio — Validate your fintech idea</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="landing.css?v=2" />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3N6X4DN8QR"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag("config", "G-3N6X4DN8QR");
     </script>
-</head>
-<body>
-
-  <!-- ==================== NAVBAR ==================== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <img src="images/logo-dark.svg" alt="Smoke Studio" class="logo-img">
-      </a>
-      <div class="nav-links">
-        <a href="#hero" class="nav-link active">Home</a>
-        <a href="servicios.html" class="nav-link">Services</a>
-        <a href="nosotros.html" class="nav-link">About Us</a>
-        <a href="#" class="nav-link">Resources <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
+  </head>
+  <body>
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo-dark.svg" alt="Smoke Studio" class="logo-img" />
+        </a>
+        <div class="nav-links">
+          <a href="#hero" class="nav-link active">Home</a>
+          <a href="servicios.html" class="nav-link">Services</a>
+          <a href="nosotros.html" class="nav-link">About Us</a>
+          <a href="#" class="nav-link"
+            >Resources
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M6 9l6 6 6-6" /></svg
+          ></a>
+        </div>
+        <div class="nav-actions">
+          <a href="contacto.html" class="btn-nav-outline">Contact</a>
+          <a href="smokescan/index.html" class="btn-nav-primary">Validate</a>
+        </div>
+        <button
+          class="menu-toggle"
+          id="mobile-menu-btn"
+          aria-label="Toggle menu"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
       </div>
-      <div class="nav-actions">
-        <a href="contacto.html" class="btn-nav-outline">Contact</a>
-        <a href="smokescan/index.html" class="btn-nav-primary">Validate</a>
-      </div>
-      <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- ==================== HERO ==================== -->
-  <section class="hero" id="hero">
-    <div class="hero-image-container">
-      <img src="images/hero-bg-brainstorm.png" alt="Equipo trabajando" class="hero-bg-image">
-      <div class="hero-overlay"></div>
-      
-      <div class="hero-content">
-        <div class="container hero-container-flex">
-          <div class="hero-left">
-            <h1 class="hero-heading">Transform findings,<br>into decisions.</h1>
-          </div>
-          <div class="hero-right">
-            <p class="hero-subtext">We validate ideas with real customers before you invest. Rigorous experiments, clear evidence, reduced risk.</p>
-            <div class="hero-actions">
-              <a href="contacto.html" class="btn-primary">Book a Strategy Call</a>
-              <a href="smokescan/index.html" class="btn-outline">Try SmokeScan</a>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero">
+      <div class="hero-image-container">
+        <img
+          src="images/hero-bg-brainstorm.png"
+          alt="Equipo trabajando"
+          class="hero-bg-image"
+        />
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <div class="container hero-container-flex">
+            <div class="hero-left">
+              <h1 class="hero-heading">
+                Transform findings,<br />into decisions.
+              </h1>
+            </div>
+            <div class="hero-right">
+              <p class="hero-subtext">
+                We validate ideas with real customers before you invest.
+                Rigorous experiments, clear evidence, reduced risk.
+              </p>
+              <div class="hero-actions">
+                <a href="contacto.html" class="btn-primary"
+                  >Book a Strategy Call</a
+                >
+                <a href="smokescan/index.html" class="btn-outline"
+                  >Try SmokeScan</a
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== THE PROBLEM (REALIDAD) ==================== -->
-  <section class="realidad" id="realidad-problem">
-    <div class="container">
-      <div class="realidad-grid">
-        <div class="realidad-content">
-          <span class="section-tag section-tag--dark">The problem</span>
-          <h2 class="section-heading">Why do most fintechs fail?</h2>
-          <p class="section-body">Nearly 95% of financial products launched to market fail to gain traction. Furthermore, 35% of startups close their doors because there is no real market need for their solutions. Most are built on internal assumptions, not on what users actually want or trust.</p>
-          <p class="section-subtitle">Don’t build expensive financial features nobody needs. Discover how to avoid becoming a statistic.</p>
-          <div class="btn-group">
-            <a href="contacto.html" class="btn-primary">Contact Us</a>
-            <a href="#proceso" class="btn-text">How to avoid this? <span class="arrow">→</span></a>
-          </div>
-        </div>
-        <div class="realidad-image">
-          <img src="images/placeholder-image-21.png" alt="Análisis de datos" class="rounded-img">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== THE SOLUTION (ORIGEN) ==================== -->
-  <section class="origen" id="origen-solution">
-    <div class="container">
-      <span class="section-tag section-tag--light">We found the solution</span>
-      <h2 class="section-heading">Smoke testing: your shield against <br><i>fintech failure</i>.</h2>
-      <p class="section-subtitle section-subtitle--light">Smoke testing is a fast, cost-effective, and controlled method to validate whether a product is worth pursuing. It’s not about complex backend technology, but proving if users want it, understand it, and are willing to take action with their finances.</p>
-      
-      <div class="origen-cards">
-        <div class="origen-card">
-          <div class="origen-card-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/><path d="M7 17l-3.5 3.5a2.12 2.12 0 0 0 3 3L10 20"/><path d="M14 10l-4 4"/></svg>
-          </div>
-          <h3 class="origen-card-title">Save Capital</h3>
-          <p class="origen-card-text">Avoid building products nobody will use and focus your resources on what truly drives measurable value.</p>
-          <a href="#" class="origen-card-link">Discover <span class="arrow">›</span></a>
-        </div>
-        <div class="origen-card">
-          <div class="origen-card-icon">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a2 2 0 0 0 1.8 2.95h10.96a2 2 0 0 0 1.8-2.95L14.21 10.423A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M14 16H6.5"/></svg>
-          </div>
-          <h3 class="origen-card-title">Know your Users</h3>
-          <p class="origen-card-text">Learn fast with agile experiments that reveal real market acceptance and trust in the financial sector.</p>
-          <a href="#" class="origen-card-link">Observe <span class="arrow">›</span></a>
-        </div>
-        <div class="origen-card origen-card--with-image">
-          <div class="origen-card-img-wrap">
-            <img src="images/placeholder-image-381.png" alt="Métricas de conversión" class="origen-card-img">
-          </div>
-          <div class="origen-card-content">
-            <span class="origen-card-badge">Validation</span>
-            <h3 class="origen-card-title">Data-Driven Decisions</h3>
-            <p class="origen-card-text">Ground your strategic decisions in clear, empirical data—not generic market intuitions.</p>
-            <a href="#" class="origen-card-link">Measure <span class="arrow">›</span></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== HOW WE DO IT ==================== -->
-  <section class="proceso" id="proceso">
-    <div class="container">
-      <span class="section-tag">How we do it</span>
-      <h2 class="section-heading">Partnering from financial ideation to final decision.</h2>
-      <p class="section-subtitle">Each step builds upon the last. Clear hypothesis, rigorous experiment, real evidence, informed decision. No interpretation, no noise.</p>
-      <div class="proceso-actions">
-        <a href="smokescan/index.html" class="btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg> Try SmokeScan</a>
-        <a href="contacto.html" class="btn-text">Book a call <span class="arrow">›</span></a>
-      </div>
-
-      <div class="timeline">
-        <!-- Step 1 - RIGHT -->
-        <div class="timeline-item timeline-item--right">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3 class="timeline-step-title">Identify</h3>
-            <h4 class="timeline-step-subtitle">Define your hypothesis</h4>
-            <p class="timeline-step-text">We converse with you to understand your fintech niche, your ideal user, and the core pain point. We refine your value proposition and validation goals.</p>
-          </div>
-        </div>
-        <!-- Step 2 - LEFT -->
-        <div class="timeline-item timeline-item--left">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3 class="timeline-step-title">Design</h3>
-            <h4 class="timeline-step-subtitle">Design the experiment</h4>
-            <p class="timeline-step-text">We select the optimal way to test your idea: a sleek landing page, an interactive prototype, or a "fake door". We build the minimum necessary structure using low-code/no-code tools, accelerating the process from months to weeks.</p>
-          </div>
-        </div>
-        <!-- Step 3 - RIGHT -->
-        <div class="timeline-item timeline-item--right">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3 class="timeline-step-title">Execute</h3>
-            <h4 class="timeline-step-subtitle">Validate with real users</h4>
-            <p class="timeline-step-text">We recruit users that perfectly match your target financial profile. We monitor actual behavior (clicks, signups, and conversion intent), not just their opinions. <strong>The numbers speak.</strong></p>
-          </div>
-        </div>
-        <!-- Step 4 - LEFT -->
-        <div class="timeline-item timeline-item--left">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3 class="timeline-step-title">Decide</h3>
-            <h4 class="timeline-step-subtitle">Analyze & Decide</h4>
-            <p class="timeline-step-text">We measure CTR, intent, and conversion; providing you with an actionable report containing clear recommendations: proceed, pivot, or stop. Our AI-driven analysis minimizes your financial exposure.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== SERVICES ==================== -->
-  <section class="servicios" id="servicios">
-    <div class="container">
-      <span class="section-tag section-tag--light">Your starting point</span>
-      <h2 class="section-heading section-heading--light">Tailored Fintech Services</h2>
-      <p class="section-subtitle section-subtitle--light">Whether you run the end-to-end process or select a service for your idea's specific stage, our mission remains the same: We help you make evidence-based financial decisions.</p>
-      <div class="servicios-cards">
-        <div class="servicio-card">
-          <span class="servicio-label">Data</span>
-          <div class="servicio-image">
-            <img src="images/placeholder-image-219.png" alt="Market Research">
-          </div>
-          <h3 class="servicio-title">Market & User Research</h3>
-          <p class="servicio-text">Discover exactly who your target user is and what their true financial friction points are. Ideal when you have an initial spark but need to deeply understand your audience.</p>
-          <a href="servicios.html" class="servicio-link">Research <span class="arrow">›</span></a>
-        </div>
-        <div class="servicio-card">
-          <span class="servicio-label">Validation</span>
-          <div class="servicio-image">
-            <img src="images/placeholder-image-360.png" alt="Experiment Design">
-          </div>
-          <h3 class="servicio-title">Experiment Design</h3>
-          <p class="servicio-text">We materialize your hypothesis into a clickable prototype or standalone landing page to capture behavioral data.</p>
-          <a href="servicios.html" class="servicio-link">Validation <span class="arrow">›</span></a>
-        </div>
-        <div class="servicio-card">
-          <span class="servicio-label">Development</span>
-          <div class="servicio-image">
-            <img src="images/placeholder-image-915.png" alt="Low-Code MVP">
-          </div>
-          <h3 class="servicio-title">Low-Code Development</h3>
-          <p class="servicio-text">We build the MVP required to measure intent without wasting months of engineering efforts.</p>
-          <a href="servicios.html" class="servicio-link">MVP <span class="arrow">›</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== SMOKESCAN ==================== -->
-  <section class="diagnostico" id="diagnostico">
-    <div class="container">
-      <div class="diagnostico-grid">
-        <div class="diagnostico-content">
-          <span class="section-tag">BETA</span>
-          <h2 class="section-heading">SmokeScan: Our rapid AI Idea Validator</h2>
-          <p class="section-body">Answer five strategic questions and receive a mini-report detailing your validation score, risk level, and three tailored experiment suggestions for your fintech idea. The perfect first step to guide your decisions and spark curiosity.</p>
-          <div class="section-actions">
-            <a href="smokescan/index.html" class="btn-primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg> Try SmokeScan</a>
-            <a href="contacto.html" class="btn-text">Book a call <span class="arrow">›</span></a>
-          </div>
-        </div>
-        <div class="diagnostico-image">
-          <img src="images/placeholder-image-507.png" alt="Idea Risk Report" class="rounded-img">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== LOGOS ==================== -->
-  <section class="logos-section" id="logos">
-    <div class="container">
-      <h2 class="logos-heading">Leading innovators are already making data-driven decisions with us.</h2>
-      <div class="logos-grid">
-        <div class="logo-item"><img src="images/logo-150.svg" alt="Partner logo"></div>
-        <div class="logo-item"><img src="images/logo-153.svg" alt="Partner logo"></div>
-        <div class="logo-item"><img src="images/logo-156.svg" alt="Partner logo"></div>
-        <div class="logo-item"><img src="images/logo-160.svg" alt="Partner logo"></div>
-        <div class="logo-item"><img src="images/logo-163.svg" alt="Partner logo"></div>
-        <div class="logo-item"><img src="images/logo-166.svg" alt="Partner logo"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== FAQ ==================== -->
-  <section class="faq" id="faq">
-    <div class="container container--narrow">
-      <h2 class="section-heading text-center">FAQs</h2>
-      <p class="section-subtitle text-center">Clear answers on validation, methodology, and how we reduce your risk.</p>
-      <div class="faq-list">
-        <details class="faq-item" open>
-          <summary class="faq-question">How long does it take? <span class="faq-icon"></span></summary>
-          <p class="faq-answer">A standard smoke test runs for 2 to 3 weeks; a low-code MVP takes 4 to 8. Our use of AI and no-code tools bypasses months of traditional development.</p>
-        </details>
-        <details class="faq-item" open>
-          <summary class="faq-question">How do we source users for validation? <span class="faq-icon"></span></summary>
-          <p class="faq-answer">We handle the precise recruitment of users that match your target demographic and financial profile.</p>
-        </details>
-        <details class="faq-item" open>
-          <summary class="faq-question">What if it fails? <span class="faq-icon"></span></summary>
-          <p class="faq-answer">That is validation. Discovering a flaw early costs a fraction of a late-stage failure. The data tells you whether to pivot, adjust, or kill the idea. That’s an informed decision.</p>
-        </details>
-        <details class="faq-item" open>
-          <summary class="faq-question">What is the cost? <span class="faq-icon"></span></summary>
-          <p class="faq-answer">It varies based on your specific needs and scope. What we do know is that launching a financial product without validation guarantees a significantly higher cost.</p>
-        </details>
-        <details class="faq-item" open>
-          <summary class="faq-question">How does this integrate with my existing workflow? <span class="faq-icon"></span></summary>
-          <p class="faq-answer">Think of us as your rapid-validation arm. We integrate technology that helps build a high-fidelity simulation of your product, seamlessly accompanying your team.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== CTA ==================== -->
-  <section class="cta-section" id="cta">
-    <div class="container text-center">
-      <h2 class="section-heading">Reduce your risk today.</h2>
-      <p class="section-subtitle">Book a strategic session and discover how to validate your fintech idea with concrete market evidence.</p>
-      <div class="cta-actions">
-        <a href="contacto.html" class="btn-primary">Book Now</a>
-      </div>
-      <div class="cta-image">
-        <img src="images/working-session.png" alt="Collaborating Team" class="rounded-img-lg">
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="footer" id="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="images/logo-light.svg" alt="Smoke Studio" class="footer-logo">
-          <div class="footer-contact-info">
-            <div>
-              <p class="footer-label">Address</p>
-              <p class="footer-value">CDMX, Mexico</p>
-            </div>
-            <div>
-              <p class="footer-label">Contact</p>
-              <p class="footer-value">+54 11 3000 0000</p>
-              <a href="mailto:hello@smokestudio.com" class="footer-email">hello@smokestudio.com</a>
+    <!-- ==================== THE PROBLEM (REALIDAD) ==================== -->
+    <section class="realidad" id="realidad-problem">
+      <div class="container">
+        <div class="realidad-grid">
+          <div class="realidad-content">
+            <span class="section-tag section-tag--dark">The problem</span>
+            <h2 class="section-heading">Why do most fintechs fail?</h2>
+            <p class="section-body">
+              Nearly 95% of financial products launched to market fail to gain
+              traction. Furthermore, 35% of startups close their doors because
+              there is no real market need for their solutions. Most are built
+              on internal assumptions, not on what users actually want or trust.
+            </p>
+            <p class="section-subtitle">
+              Don’t build expensive financial features nobody needs. Discover
+              how to avoid becoming a statistic.
+            </p>
+            <div class="btn-group">
+              <a href="contacto.html" class="btn-primary">Contact Us</a>
+              <a href="#proceso" class="btn-text"
+                >How to avoid this? <span class="arrow">→</span></a
+              >
             </div>
           </div>
-          <div class="footer-social">
-            <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-            <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
-            <a href="#" aria-label="X"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-            <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
-            <a href="#" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#0F172A"/></svg></a>
-          </div>
-        </div>
-        <div class="footer-nav">
-          <div class="footer-nav-col">
-            <a href="#hero" class="footer-nav-link">Home</a>
-            <a href="servicios.html" class="footer-nav-link">Services</a>
-            <a href="nosotros.html" class="footer-nav-link">About Us</a>
-          </div>
-          <div class="footer-nav-col">
-            <a href="contacto.html" class="footer-nav-link">Contact</a>
-            <a href="smokescan/index.html" class="footer-nav-link">SmokeScan</a>
-            <a href="#" class="footer-nav-link">Blog</a>
+          <div class="realidad-image">
+            <img
+              src="images/placeholder-image-21.png"
+              alt="Análisis de datos"
+              class="rounded-img"
+            />
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>© 2026 Smoke Studio. All rights reserved.</p>
+    </section>
+
+    <!-- ==================== THE SOLUTION (ORIGEN) ==================== -->
+    <section class="origen" id="origen-solution">
+      <div class="container">
+        <span class="section-tag section-tag--light"
+          >We found the solution</span
+        >
+        <h2 class="section-heading">
+          Smoke testing: your shield against <br /><i>fintech failure</i>.
+        </h2>
+        <p class="section-subtitle section-subtitle--light">
+          Smoke testing is a fast, cost-effective, and controlled method to
+          validate whether a product is worth pursuing. It’s not about complex
+          backend technology, but proving if users want it, understand it, and
+          are willing to take action with their finances.
+        </p>
+
+        <div class="origen-cards">
+          <div class="origen-card">
+            <div class="origen-card-icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                />
+                <path d="M7 17l-3.5 3.5a2.12 2.12 0 0 0 3 3L10 20" />
+                <path d="M14 10l-4 4" />
+              </svg>
+            </div>
+            <h3 class="origen-card-title">Save Capital</h3>
+            <p class="origen-card-text">
+              Avoid building products nobody will use and focus your resources
+              on what truly drives measurable value.
+            </p>
+            <a href="#" class="origen-card-link"
+              >Discover <span class="arrow">›</span></a
+            >
+          </div>
+          <div class="origen-card">
+            <div class="origen-card-icon">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a2 2 0 0 0 1.8 2.95h10.96a2 2 0 0 0 1.8-2.95L14.21 10.423A2 2 0 0 1 14 9.527V2"
+                />
+                <path d="M8.5 2h7" />
+                <path d="M14 16H6.5" />
+              </svg>
+            </div>
+            <h3 class="origen-card-title">Know your Users</h3>
+            <p class="origen-card-text">
+              Learn fast with agile experiments that reveal real market
+              acceptance and trust in the financial sector.
+            </p>
+            <a href="#" class="origen-card-link"
+              >Observe <span class="arrow">›</span></a
+            >
+          </div>
+          <div class="origen-card origen-card--with-image">
+            <div class="origen-card-img-wrap">
+              <img
+                src="images/placeholder-image-381.png"
+                alt="Métricas de conversión"
+                class="origen-card-img"
+              />
+            </div>
+            <div class="origen-card-content">
+              <span class="origen-card-badge">Validation</span>
+              <h3 class="origen-card-title">Data-Driven Decisions</h3>
+              <p class="origen-card-text">
+                Ground your strategic decisions in clear, empirical data—not
+                generic market intuitions.
+              </p>
+              <a href="#" class="origen-card-link"
+                >Measure <span class="arrow">›</span></a
+              >
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- ==================== HOW WE DO IT ==================== -->
+    <section class="proceso" id="proceso">
+      <div class="container">
+        <span class="section-tag">How we do it</span>
+        <h2 class="section-heading">
+          Partnering from financial ideation to final decision.
+        </h2>
+        <p class="section-subtitle">
+          Each step builds upon the last. Clear hypothesis, rigorous experiment,
+          real evidence, informed decision. No interpretation, no noise.
+        </p>
+        <div class="proceso-actions">
+          <a href="smokescan/index.html" class="btn-primary"
+            ><svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="3" />
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"
+              />
+            </svg>
+            Try SmokeScan</a
+          >
+          <a href="contacto.html" class="btn-text"
+            >Book a call <span class="arrow">›</span></a
+          >
+        </div>
+
+        <div class="timeline">
+          <!-- Step 1 - RIGHT -->
+          <div class="timeline-item timeline-item--right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="timeline-step-title">Identify</h3>
+              <h4 class="timeline-step-subtitle">Define your hypothesis</h4>
+              <p class="timeline-step-text">
+                We converse with you to understand your fintech niche, your
+                ideal user, and the core pain point. We refine your value
+                proposition and validation goals.
+              </p>
+            </div>
+          </div>
+          <!-- Step 2 - LEFT -->
+          <div class="timeline-item timeline-item--left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="timeline-step-title">Design</h3>
+              <h4 class="timeline-step-subtitle">Design the experiment</h4>
+              <p class="timeline-step-text">
+                We select the optimal way to test your idea: a sleek landing
+                page, an interactive prototype, or a "fake door". We build the
+                minimum necessary structure using low-code/no-code tools,
+                accelerating the process from months to weeks.
+              </p>
+            </div>
+          </div>
+          <!-- Step 3 - RIGHT -->
+          <div class="timeline-item timeline-item--right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="timeline-step-title">Execute</h3>
+              <h4 class="timeline-step-subtitle">Validate with real users</h4>
+              <p class="timeline-step-text">
+                We recruit users that perfectly match your target financial
+                profile. We monitor actual behavior (clicks, signups, and
+                conversion intent), not just their opinions.
+                <strong>The numbers speak.</strong>
+              </p>
+            </div>
+          </div>
+          <!-- Step 4 - LEFT -->
+          <div class="timeline-item timeline-item--left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3 class="timeline-step-title">Decide</h3>
+              <h4 class="timeline-step-subtitle">Analyze & Decide</h4>
+              <p class="timeline-step-text">
+                We measure CTR, intent, and conversion; providing you with an
+                actionable report containing clear recommendations: proceed,
+                pivot, or stop. Our AI-driven analysis minimizes your financial
+                exposure.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section class="servicios" id="servicios">
+      <div class="container">
+        <span class="section-tag section-tag--light">Your starting point</span>
+        <h2 class="section-heading section-heading--light">
+          Tailored Fintech Services
+        </h2>
+        <p class="section-subtitle section-subtitle--light">
+          Whether you run the end-to-end process or select a service for your
+          idea's specific stage, our mission remains the same: We help you make
+          evidence-based financial decisions.
+        </p>
+        <div class="servicios-cards">
+          <div class="servicio-card">
+            <span class="servicio-label">Data</span>
+            <div class="servicio-image">
+              <img
+                src="images/placeholder-image-219.png"
+                alt="Market Research"
+              />
+            </div>
+            <h3 class="servicio-title">Market & User Research</h3>
+            <p class="servicio-text">
+              Discover exactly who your target user is and what their true
+              financial friction points are. Ideal when you have an initial
+              spark but need to deeply understand your audience.
+            </p>
+            <a href="servicios.html" class="servicio-link"
+              >Research <span class="arrow">›</span></a
+            >
+          </div>
+          <div class="servicio-card">
+            <span class="servicio-label">Validation</span>
+            <div class="servicio-image">
+              <img
+                src="images/placeholder-image-360.png"
+                alt="Experiment Design"
+              />
+            </div>
+            <h3 class="servicio-title">Experiment Design</h3>
+            <p class="servicio-text">
+              We materialize your hypothesis into a clickable prototype or
+              standalone landing page to capture behavioral data.
+            </p>
+            <a href="servicios.html" class="servicio-link"
+              >Validation <span class="arrow">›</span></a
+            >
+          </div>
+          <div class="servicio-card">
+            <span class="servicio-label">Development</span>
+            <div class="servicio-image">
+              <img src="images/placeholder-image-915.png" alt="Low-Code MVP" />
+            </div>
+            <h3 class="servicio-title">Low-Code Development</h3>
+            <p class="servicio-text">
+              We build the MVP required to measure intent without wasting months
+              of engineering efforts.
+            </p>
+            <a href="servicios.html" class="servicio-link"
+              >MVP <span class="arrow">›</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SMOKESCAN ==================== -->
+    <section class="diagnostico" id="diagnostico">
+      <div class="container">
+        <div class="diagnostico-grid">
+          <div class="diagnostico-content">
+            <span class="section-tag">BETA</span>
+            <h2 class="section-heading">
+              SmokeScan: Our rapid AI Idea Validator
+            </h2>
+            <p class="section-body">
+              Answer five strategic questions and receive a mini-report
+              detailing your validation score, risk level, and three tailored
+              experiment suggestions for your fintech idea. The perfect first
+              step to guide your decisions and spark curiosity.
+            </p>
+            <div class="section-actions">
+              <a href="smokescan/index.html" class="btn-primary"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+                Try SmokeScan</a
+              >
+              <a href="contacto.html" class="btn-text"
+                >Book a call <span class="arrow">›</span></a
+              >
+            </div>
+          </div>
+          <div class="diagnostico-image">
+            <img
+              src="images/placeholder-image-507.png"
+              alt="Idea Risk Report"
+              class="rounded-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LOGOS ==================== -->
+    <section class="logos-section" id="logos">
+      <div class="container">
+        <h2 class="logos-heading">
+          Leading innovators are already making data-driven decisions with us.
+        </h2>
+        <div class="logos-grid">
+          <div class="logo-item">
+            <img src="images/logo-150.svg" alt="Partner logo" />
+          </div>
+          <div class="logo-item">
+            <img src="images/logo-153.svg" alt="Partner logo" />
+          </div>
+          <div class="logo-item">
+            <img src="images/logo-156.svg" alt="Partner logo" />
+          </div>
+          <div class="logo-item">
+            <img src="images/logo-160.svg" alt="Partner logo" />
+          </div>
+          <div class="logo-item">
+            <img src="images/logo-163.svg" alt="Partner logo" />
+          </div>
+          <div class="logo-item">
+            <img src="images/logo-166.svg" alt="Partner logo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="faq" id="faq">
+      <div class="container container--narrow">
+        <h2 class="section-heading text-center">FAQs</h2>
+        <p class="section-subtitle text-center">
+          Clear answers on validation, methodology, and how we reduce your risk.
+        </p>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              How long does it take? <span class="faq-icon"></span>
+            </summary>
+            <p class="faq-answer">
+              A standard smoke test runs for 2 to 3 weeks; a low-code MVP takes
+              4 to 8. Our use of AI and no-code tools bypasses months of
+              traditional development.
+            </p>
+          </details>
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              How do we source users for validation?
+              <span class="faq-icon"></span>
+            </summary>
+            <p class="faq-answer">
+              We handle the precise recruitment of users that match your target
+              demographic and financial profile.
+            </p>
+          </details>
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              What if it fails? <span class="faq-icon"></span>
+            </summary>
+            <p class="faq-answer">
+              That is validation. Discovering a flaw early costs a fraction of a
+              late-stage failure. The data tells you whether to pivot, adjust,
+              or kill the idea. That’s an informed decision.
+            </p>
+          </details>
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              What is the cost? <span class="faq-icon"></span>
+            </summary>
+            <p class="faq-answer">
+              It varies based on your specific needs and scope. What we do know
+              is that launching a financial product without validation
+              guarantees a significantly higher cost.
+            </p>
+          </details>
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              How does this integrate with my existing workflow?
+              <span class="faq-icon"></span>
+            </summary>
+            <p class="faq-answer">
+              Think of us as your rapid-validation arm. We integrate technology
+              that helps build a high-fidelity simulation of your product,
+              seamlessly accompanying your team.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="cta-section" id="cta">
+      <div class="container text-center">
+        <h2 class="section-heading">Reduce your risk today.</h2>
+        <p class="section-subtitle">
+          Book a strategic session and discover how to validate your fintech
+          idea with concrete market evidence.
+        </p>
+        <div class="cta-actions">
+          <a href="contacto.html" class="btn-primary">Book Now</a>
+        </div>
+        <div class="cta-image">
+          <img
+            src="images/working-session.png"
+            alt="Collaborating Team"
+            class="rounded-img-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img
+              src="images/logo-light.svg"
+              alt="Smoke Studio"
+              class="footer-logo"
+            />
+            <div class="footer-contact-info">
+              <div>
+                <p class="footer-label">Address</p>
+                <p class="footer-value">CDMX, Mexico</p>
+              </div>
+              <div>
+                <p class="footer-label">Contact</p>
+                <p class="footer-value">+54 11 3000 0000</p>
+                <a href="mailto:hello@smokestudio.com" class="footer-email"
+                  >hello@smokestudio.com</a
+                >
+              </div>
+            </div>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                  /></svg
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="5" />
+                  <circle cx="17.5" cy="6.5" r="1.5" /></svg
+              ></a>
+              <a href="#" aria-label="X"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  /></svg
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                  />
+                  <circle cx="4" cy="4" r="2" /></svg
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"
+                  />
+                  <polygon
+                    points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+                    fill="#0F172A"
+                  /></svg
+              ></a>
+            </div>
+          </div>
+          <div class="footer-nav">
+            <div class="footer-nav-col">
+              <a href="#hero" class="footer-nav-link">Home</a>
+              <a href="servicios.html" class="footer-nav-link">Services</a>
+              <a href="nosotros.html" class="footer-nav-link">About Us</a>
+            </div>
+            <div class="footer-nav-col">
+              <a href="contacto.html" class="footer-nav-link">Contact</a>
+              <a href="smokescan/index.html" class="footer-nav-link"
+                >SmokeScan</a
+              >
+              <a href="#" class="footer-nav-link">Blog</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Smoke Studio. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==================== MOBILE MENU ==================== -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+      <a href="#hero" class="mobile-nav-link" onclick="closeMobileMenu()"
+        >Home</a
+      >
+      <a
+        href="servicios.html"
+        class="mobile-nav-link"
+        onclick="closeMobileMenu()"
+        >Services</a
+      >
+      <a
+        href="nosotros.html"
+        class="mobile-nav-link"
+        onclick="closeMobileMenu()"
+        >About Us</a
+      >
+      <a
+        href="contacto.html"
+        class="mobile-nav-link"
+        onclick="closeMobileMenu()"
+        >Contact</a
+      >
+      <a
+        href="smokescan/index.html"
+        class="btn-primary"
+        style="margin-top: 24px; font-size: 18px; padding: 14px 32px"
+        onclick="closeMobileMenu()"
+        >Validate</a
+      >
     </div>
-  </footer>
 
-  <!-- ==================== MOBILE MENU ==================== -->
-  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-    <a href="#hero" class="mobile-nav-link" onclick="closeMobileMenu()">Home</a>
-    <a href="servicios.html" class="mobile-nav-link" onclick="closeMobileMenu()">Services</a>
-    <a href="nosotros.html" class="mobile-nav-link" onclick="closeMobileMenu()">About Us</a>
-    <a href="contacto.html" class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a>
-    <a href="smokescan/index.html" class="btn-primary" style="margin-top: 24px; font-size: 18px; padding: 14px 32px;" onclick="closeMobileMenu()">Validate</a>
-  </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu-overlay");
+        if (menuBtn && mobileMenu) {
+          menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("active");
+            document.body.style.overflow = mobileMenu.classList.contains(
+              "active",
+            )
+              ? "hidden"
+              : "";
+          });
+        }
+      });
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const menuBtn = document.getElementById('mobile-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu-overlay');
-      if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', () => {
-          mobileMenu.classList.toggle('active');
-          document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-        });
+      function closeMobileMenu() {
+        const mobileMenu = document.getElementById("mobile-menu-overlay");
+        if (mobileMenu) {
+          mobileMenu.classList.remove("active");
+          document.body.style.overflow = "";
+        }
       }
-    });
-
-    function closeMobileMenu() {
-      const mobileMenu = document.getElementById('mobile-menu-overlay');
-      if (mobileMenu) {
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = '';
-      }
-    }
-  </script>
-
-</body>
+    </script>
+  </body>
 </html>

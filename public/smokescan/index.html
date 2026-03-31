@@ -1,201 +1,888 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SmokeScan | AI Idea Validator</title>
-    <meta name="description" content="Validate your startup idea with AI using the 7+7 Method. Get a VC-grade diagnostic in minutes.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta
+      name="description"
+      content="Validate your startup idea with AI using the 7+7 Method. Get a VC-grade diagnostic in minutes."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3N6X4DN8QR"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag("config", "G-3N6X4DN8QR");
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="app-layout">
-        <!-- ==================== TOP NAVIGATION ==================== -->
-        <header class="top-nav">
-            <div class="logo">
-                <a href="/" style="text-decoration:none; color:white;">
-                    <h2>SmokeScan</h2>
-                </a>
-            </div>
-            <div class="nav-links">
-                <a href="#" class="active-link">Dashboard</a>
-                <a href="#">Evidence Vault</a>
-                <a href="#">Methodology</a>
-            </div>
-            <div class="nav-tools">
-                <button class="icon-btn" aria-label="Notifications">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
-                </button>
-                <button class="icon-btn" aria-label="Settings">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-                </button>
-                <div class="user-avatar">
-                   <svg viewBox="0 0 24 24" width="24" height="24" fill="#37E2D5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </div>
-            </div>
-        </header>
-
-        <div class="main-content">
-            <!-- ==================== SIDEBAR ==================== -->
-            <aside class="sidebar">
-                <div class="sidebar-header">
-                    <div class="shield-icon">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                    </div>
-                    <h3>Chain of Evidence</h3>
-                </div>
-                <p class="sidebar-subtitle">Validation Workflow</p>
-                <nav class="workflow-steps">
-                    <!-- Status dynamic -->
-                    <div class="step-item active" id="step-1">
-                        <div class="step-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect width="8" height="16" x="2" y="4" rx="2"></rect><rect width="4" height="8" x="14" y="8" rx="2"></rect></svg></div>
-                        <span>Contextual Analysis</span>
-                    </div>
-                    <div class="step-item" id="step-2">
-                        <div class="step-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                        <span>Source Validation</span>
-                    </div>
-                    <div class="step-item" id="step-3">
-                        <div class="step-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
-                        <span>Logic Check</span>
-                    </div>
-                    <div class="step-item" id="step-4">
-                        <div class="step-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></div>
-                        <span>Impact Assessment</span>
-                    </div>
-                    <div class="step-item" id="step-5">
-                        <div class="step-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                        <span>Final Certification</span>
-                    </div>
-                </nav>
-            </aside>
-
-            <!-- ==================== CHAT AREA ==================== -->
-            <main class="chat-container">
-                <div class="chat-history" id="chat-history">
-                    <!-- Dynamic chat items appended here -->
-                </div>
-
-                <!-- ==================== TYPING/PROCESSING MOCK ==================== -->
-                <div id="processing-box" class="processing-widget hidden">
-                    <div class="processing-header">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
-                        <span>VALIDATING HYPOTHESIS...</span>
-                        <span class="badge">LIVE PROCESSING</span>
-                    </div>
-                    <div class="processing-body">
-                        <div class="friction-col">
-                            <h4><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--pink)" stroke="var(--pink)" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13" stroke="white"></line><line x1="12" y1="17" x2="12.01" y2="17" stroke="white"></line></svg> Friction</h4>
-                            <ul id="friction-list">
-                                <li>Temporal mismatch in manifest timestamping.</li>
-                                <li>Encryption signature mismatch on disposal logs.</li>
-                            </ul>
-                        </div>
-                        <div class="pivot-col">
-                            <h4><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg> Next Logic Pivot</h4>
-                            <ul id="pivot-list">
-                                <li>Cross-reference carrier GPS telemetry with ledger updates.</li>
-                                <li>Analyze Disposal Node #42-X for potential buffer overflow.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ==================== FINALIZE ==================== -->
-                <div id="finalize-step" class="hidden finalize-container" style="text-align: center; margin: 20px 0;">
-                    <p style="color: var(--text-muted); margin-bottom: 10px;">Analysis complete. Generate final report?</p>
-                    <button type="button" class="btn-primary-ss" id="finalize-btn" style="background: var(--button-pink); color: #000; border: none; padding: 12px 24px; border-radius: 8px; font-weight: 700; cursor: pointer;">VER DIAGNÓSTICO FINAL</button>
-                </div>
-
-                <!-- ==================== INPUT AREA ==================== -->
-                <div class="input-area">
-                    <div class="input-box">
-                        <textarea id="user-input" rows="1" placeholder="Specify more parameters or ask a question..."></textarea>
-                        <div class="input-actions">
-                            <button class="icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg></button>
-                            <button class="icon-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg></button>
-                            <button id="send-btn" class="send-btn">SEND &gt;</button>
-                        </div>
-                    </div>
-                </div>
-            </main>
-            
-            <aside class="dashboard-panel hidden" id="dashboard" style="display:none; padding: 24px; overflow-y: auto; flex: 1;">
-                <div id="results-panel">
-                    <div class="results-header" style="margin-bottom: 24px;"><h2>AI ANALYSIS &amp; SCORING</h2></div>
-                    <div class="dashboard-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px;">
-                        <div class="gauge-card" style="background: var(--card-bg); padding: 16px; border: 1px solid var(--border-color); border-radius: 12px;">
-                            <span class="risk-label" style="font-size: 12px; color: var(--text-muted);">REAL RISK</span>
-                            <h3 id="risk-percentage" style="font-size: 24px; color: var(--button-pink); margin: 8px 0;">--%</h3>
-                            <span class="risk-status" id="risk-status" style="font-size: 14px; color: var(--text-main);">-</span>
-                        </div>
-                        <div class="score-card" style="background: var(--card-bg); padding: 16px; border: 1px solid var(--border-color); border-radius: 12px;">
-                            <span style="font-size: 12px; color: var(--text-muted);">Validation Score</span>
-                            <h2 style="font-size: 32px; color: var(--white); margin: 8px 0;"><span id="validation-score">--</span><small style="font-size: 16px; color: var(--text-muted);">/100</small></h2>
-                        </div>
-                    </div>
-                    <div class="metrics-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-bottom: 24px;">
-                        <div class="metric-card" style="background: var(--card-bg); padding: 16px; border: 1px solid var(--border-color); border-radius: 12px;">
-                            <span style="font-size: 12px; color: var(--text-muted);">Potential</span>
-                            <h3 id="market-potential" style="font-size: 18px; color: var(--white); margin: 8px 0;">--</h3>
-                            <div class="stars" id="market-stars" style="color: #FFD700; font-size: 18px;">-----</div>
-                        </div>
-                        <div class="metric-card" style="background: var(--card-bg); padding: 16px; border: 1px solid var(--border-color); border-radius: 12px;">
-                            <span style="font-size: 12px; color: var(--text-muted);">Tech Feasibility</span>
-                            <h3 id="tech-feasibility" style="font-size: 18px; color: var(--white); margin: 8px 0;">--</h3>
-                            <span id="tech-status" style="color: var(--text-muted);">-</span>
-                        </div>
-                        <div class="metric-card" style="background: var(--card-bg); padding: 16px; border: 1px solid var(--border-color); border-radius: 12px;">
-                            <span style="font-size: 12px; color: var(--text-muted);">Competition</span>
-                            <h3 id="competition-level" style="font-size: 18px; color: var(--white); margin: 8px 0;">--</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="rubric-section" style="margin-bottom: 24px;">
-                        <h3 style="font-size: 16px; color: var(--white); margin-bottom: 16px;">📊 WEIGHTED RUBRIC</h3>
-                        <div class="rubric-grid" style="display: grid; gap: 12px;">
-                            <div class="rubric-item"><div style="display:flex; justify-content:space-between; margin-bottom:4px;"><span style="color:var(--text-main); font-size:14px;">Market Clarity</span><small id="val-market_clarity" style="color:var(--text-muted);">0/10</small></div><div style="height:6px; background:var(--bg-dark); border-radius:3px;"><div id="bar-market_clarity" style="height:100%; background:var(--blue-light); width:0%; border-radius:3px;"></div></div></div>
-                            <div class="rubric-item"><div style="display:flex; justify-content:space-between; margin-bottom:4px;"><span style="color:var(--text-main); font-size:14px;">Tech Maturity</span><small id="val-tech_feasibility" style="color:var(--text-muted);">0/10</small></div><div style="height:6px; background:var(--bg-dark); border-radius:3px;"><div id="bar-tech_feasibility" style="height:100%; background:var(--blue-light); width:0%; border-radius:3px;"></div></div></div>
-                            <div class="rubric-item"><div style="display:flex; justify-content:space-between; margin-bottom:4px;"><span style="color:var(--text-main); font-size:14px;">Competition (Inverse)</span><small id="val-competition_intensity" style="color:var(--text-muted);">0/10</small></div><div style="height:6px; background:var(--bg-dark); border-radius:3px;"><div id="bar-competition_intensity" style="height:100%; background:var(--blue-light); width:0%; border-radius:3px;"></div></div></div>
-                            <div class="rubric-item"><div style="display:flex; justify-content:space-between; margin-bottom:4px;"><span style="color:var(--text-main); font-size:14px;">MVP Simplicity</span><small id="val-mvp_simplicity" style="color:var(--text-muted);">0/10</small></div><div style="height:6px; background:var(--bg-dark); border-radius:3px;"><div id="bar-mvp_simplicity" style="height:100%; background:var(--blue-light); width:0%; border-radius:3px;"></div></div></div>
-                            <div class="rubric-item"><div style="display:flex; justify-content:space-between; margin-bottom:4px;"><span style="color:var(--text-main); font-size:14px;">Regulatory Ease</span><small id="val-regulatory_risk" style="color:var(--text-muted);">0/10</small></div><div style="height:6px; background:var(--bg-dark); border-radius:3px;"><div id="bar-regulatory_risk" style="height:100%; background:var(--blue-light); width:0%; border-radius:3px;"></div></div></div>
-                            <div class="rubric-item"><div style="display:flex; justify-content:space-between; margin-bottom:4px;"><span style="color:var(--text-main); font-size:14px;">Demand Strength</span><small id="val-demand_strength" style="color:var(--text-muted);">0/10</small></div><div style="height:6px; background:var(--bg-dark); border-radius:3px;"><div id="bar-demand_strength" style="height:100%; background:var(--blue-light); width:0%; border-radius:3px;"></div></div></div>
-                        </div>
-                    </div>
-                    
-                    <div class="metrics-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px;">
-                        <div class="metric-card" style="background: var(--card-bg); padding: 16px; border: 1px solid var(--border-color); border-radius: 12px;"><span style="font-size: 12px; color: var(--text-muted);">Estimated Investment (MVP)</span><h3 id="investment-estimate" style="font-size: 20px; color: var(--blue-light); margin: 8px 0;">--</h3></div>
-                        <div class="metric-card" style="background: var(--card-bg); padding: 16px; border: 1px solid var(--border-color); border-radius: 12px;"><span style="font-size: 12px; color: var(--text-muted);">Cash Flow Projection</span><p id="cash-flow-projection" style="font-size: 14px; color: var(--white); margin: 8px 0;">--</p></div>
-                    </div>
-                    
-                    <div class="scenarios-container" style="margin-bottom: 24px;">
-                        <h3 style="font-size: 16px; color: var(--white); margin-bottom: 16px;">📈 PROBABLE SCENARIOS</h3>
-                        <div class="scenarios-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-                            <div class="scenario-box" style="padding: 16px; background: rgba(0,255,100,0.05); border: 1px solid rgba(0,255,100,0.2); border-radius: 8px;"><span style="color: #00ff66; font-size: 14px; font-weight: bold;">Optimistic</span><p id="scenario-opt" style="font-size: 14px; color: var(--text-main); margin-top: 8px;">--</p></div>
-                            <div class="scenario-box" style="padding: 16px; background: rgba(98,132,255,0.05); border: 1px solid rgba(98,132,255,0.2); border-radius: 8px;"><span style="color: var(--blue-light); font-size: 14px; font-weight: bold;">Base / Neutral</span><p id="scenario-neu" style="font-size: 14px; color: var(--text-main); margin-top: 8px;">--</p></div>
-                            <div class="scenario-box" style="padding: 16px; background: rgba(255,92,147,0.05); border: 1px solid rgba(255,92,147,0.2); border-radius: 8px;"><span style="color: var(--button-pink); font-size: 14px; font-weight: bold;">Pessimistic</span><p id="scenario-pes" style="font-size: 14px; color: var(--text-main); margin-top: 8px;">--</p></div>
-                        </div>
-                    </div>
-                    
-                    <div class="mitigation-card hidden" id="mitigation-card" style="background: rgba(255,255,0,0.05); border: 1px solid rgba(255,255,0,0.2); padding: 20px; border-radius: 12px;">
-                        <h3 style="font-size: 16px; color: #FFD700; margin-bottom: 16px;">⚠️ MITIGATION PLAN</h3>
-                        <ul id="mitigation-list" style="color: var(--text-main); padding-left: 20px; font-size: 14px; line-height: 1.6;"></ul>
-                    </div>
-                </div>
-            </aside>
+      <!-- ==================== TOP NAVIGATION ==================== -->
+      <header class="top-nav">
+        <div class="logo">
+          <a href="/" style="text-decoration: none; color: white">
+            <h2>SmokeScan</h2>
+          </a>
         </div>
+        <div class="nav-links">
+          <a href="#" class="active-link">Dashboard</a>
+          <a href="#">Evidence Vault</a>
+          <a href="#">Methodology</a>
+        </div>
+        <div class="nav-tools">
+          <button class="icon-btn" aria-label="Notifications">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+          </button>
+          <button class="icon-btn" aria-label="Settings">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="3"></circle>
+              <path
+                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+              ></path>
+            </svg>
+          </button>
+          <div class="user-avatar">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="#37E2D5">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
+        </div>
+      </header>
+
+      <div class="main-content">
+        <!-- ==================== SIDEBAR ==================== -->
+        <aside class="sidebar">
+          <div class="sidebar-header">
+            <div class="shield-icon">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>Chain of Evidence</h3>
+          </div>
+          <p class="sidebar-subtitle">Validation Workflow</p>
+          <nav class="workflow-steps">
+            <!-- Status dynamic -->
+            <div class="step-item active" id="step-1">
+              <div class="step-icon">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <rect width="8" height="16" x="2" y="4" rx="2"></rect>
+                  <rect width="4" height="8" x="14" y="8" rx="2"></rect>
+                </svg>
+              </div>
+              <span>Contextual Analysis</span>
+            </div>
+            <div class="step-item" id="step-2">
+              <div class="step-icon">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <span>Source Validation</span>
+            </div>
+            <div class="step-item" id="step-3">
+              <div class="step-icon">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                  ></path>
+                </svg>
+              </div>
+              <span>Logic Check</span>
+            </div>
+            <div class="step-item" id="step-4">
+              <div class="step-icon">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                  ></path>
+                </svg>
+              </div>
+              <span>Impact Assessment</span>
+            </div>
+            <div class="step-item" id="step-5">
+              <div class="step-icon">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <span>Final Certification</span>
+            </div>
+          </nav>
+        </aside>
+
+        <!-- ==================== CHAT AREA ==================== -->
+        <main class="chat-container">
+          <div class="chat-history" id="chat-history">
+            <!-- Dynamic chat items appended here -->
+          </div>
+
+          <!-- ==================== TYPING/PROCESSING MOCK ==================== -->
+          <div id="processing-box" class="processing-widget hidden">
+            <div class="processing-header">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"
+                ></path>
+              </svg>
+              <span>VALIDATING HYPOTHESIS...</span>
+              <span class="badge">LIVE PROCESSING</span>
+            </div>
+            <div class="processing-body">
+              <div class="friction-col">
+                <h4>
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="var(--pink)"
+                    stroke="var(--pink)"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+                    ></path>
+                    <line x1="12" y1="9" x2="12" y2="13" stroke="white"></line>
+                    <line
+                      x1="12"
+                      y1="17"
+                      x2="12.01"
+                      y2="17"
+                      stroke="white"
+                    ></line>
+                  </svg>
+                  Friction
+                </h4>
+                <ul id="friction-list">
+                  <li>Temporal mismatch in manifest timestamping.</li>
+                  <li>Encryption signature mismatch on disposal logs.</li>
+                </ul>
+              </div>
+              <div class="pivot-col">
+                <h4>
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline
+                      points="22 12 18 12 15 21 9 3 6 12 2 12"
+                    ></polyline>
+                  </svg>
+                  Next Logic Pivot
+                </h4>
+                <ul id="pivot-list">
+                  <li>
+                    Cross-reference carrier GPS telemetry with ledger updates.
+                  </li>
+                  <li>
+                    Analyze Disposal Node #42-X for potential buffer overflow.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==================== FINALIZE ==================== -->
+          <div
+            id="finalize-step"
+            class="hidden finalize-container"
+            style="text-align: center; margin: 20px 0"
+          >
+            <p style="color: var(--text-muted); margin-bottom: 10px">
+              Analysis complete. Generate final report?
+            </p>
+            <button
+              type="button"
+              class="btn-primary-ss"
+              id="finalize-btn"
+              style="
+                background: var(--button-pink);
+                color: #000;
+                border: none;
+                padding: 12px 24px;
+                border-radius: 8px;
+                font-weight: 700;
+                cursor: pointer;
+              "
+            >
+              VER DIAGNÓSTICO FINAL
+            </button>
+          </div>
+
+          <!-- ==================== INPUT AREA ==================== -->
+          <div class="input-area">
+            <div class="input-box">
+              <textarea
+                id="user-input"
+                rows="1"
+                placeholder="Specify more parameters or ask a question..."
+              ></textarea>
+              <div class="input-actions">
+                <button class="icon-btn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"
+                    ></path>
+                  </svg>
+                </button>
+                <button class="icon-btn">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+                    ></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" y1="19" x2="12" y2="23"></line>
+                    <line x1="8" y1="23" x2="16" y2="23"></line>
+                  </svg>
+                </button>
+                <button id="send-btn" class="send-btn">SEND &gt;</button>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <aside
+          class="dashboard-panel hidden"
+          id="dashboard"
+          style="display: none; padding: 24px; overflow-y: auto; flex: 1"
+        >
+          <div id="results-panel">
+            <div class="results-header" style="margin-bottom: 24px">
+              <h2>AI ANALYSIS &amp; SCORING</h2>
+            </div>
+            <div
+              class="dashboard-grid"
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 16px;
+                margin-bottom: 24px;
+              "
+            >
+              <div
+                class="gauge-card"
+                style="
+                  background: var(--card-bg);
+                  padding: 16px;
+                  border: 1px solid var(--border-color);
+                  border-radius: 12px;
+                "
+              >
+                <span
+                  class="risk-label"
+                  style="font-size: 12px; color: var(--text-muted)"
+                  >REAL RISK</span
+                >
+                <h3
+                  id="risk-percentage"
+                  style="
+                    font-size: 24px;
+                    color: var(--button-pink);
+                    margin: 8px 0;
+                  "
+                >
+                  --%
+                </h3>
+                <span
+                  class="risk-status"
+                  id="risk-status"
+                  style="font-size: 14px; color: var(--text-main)"
+                  >-</span
+                >
+              </div>
+              <div
+                class="score-card"
+                style="
+                  background: var(--card-bg);
+                  padding: 16px;
+                  border: 1px solid var(--border-color);
+                  border-radius: 12px;
+                "
+              >
+                <span style="font-size: 12px; color: var(--text-muted)"
+                  >Validation Score</span
+                >
+                <h2 style="font-size: 32px; color: var(--white); margin: 8px 0">
+                  <span id="validation-score">--</span
+                  ><small style="font-size: 16px; color: var(--text-muted)"
+                    >/100</small
+                  >
+                </h2>
+              </div>
+            </div>
+            <div
+              class="metrics-grid"
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 16px;
+                margin-bottom: 24px;
+              "
+            >
+              <div
+                class="metric-card"
+                style="
+                  background: var(--card-bg);
+                  padding: 16px;
+                  border: 1px solid var(--border-color);
+                  border-radius: 12px;
+                "
+              >
+                <span style="font-size: 12px; color: var(--text-muted)"
+                  >Potential</span
+                >
+                <h3
+                  id="market-potential"
+                  style="font-size: 18px; color: var(--white); margin: 8px 0"
+                >
+                  --
+                </h3>
+                <div
+                  class="stars"
+                  id="market-stars"
+                  style="color: #ffd700; font-size: 18px"
+                >
+                  -----
+                </div>
+              </div>
+              <div
+                class="metric-card"
+                style="
+                  background: var(--card-bg);
+                  padding: 16px;
+                  border: 1px solid var(--border-color);
+                  border-radius: 12px;
+                "
+              >
+                <span style="font-size: 12px; color: var(--text-muted)"
+                  >Tech Feasibility</span
+                >
+                <h3
+                  id="tech-feasibility"
+                  style="font-size: 18px; color: var(--white); margin: 8px 0"
+                >
+                  --
+                </h3>
+                <span id="tech-status" style="color: var(--text-muted)">-</span>
+              </div>
+              <div
+                class="metric-card"
+                style="
+                  background: var(--card-bg);
+                  padding: 16px;
+                  border: 1px solid var(--border-color);
+                  border-radius: 12px;
+                "
+              >
+                <span style="font-size: 12px; color: var(--text-muted)"
+                  >Competition</span
+                >
+                <h3
+                  id="competition-level"
+                  style="font-size: 18px; color: var(--white); margin: 8px 0"
+                >
+                  --
+                </h3>
+              </div>
+            </div>
+
+            <div class="rubric-section" style="margin-bottom: 24px">
+              <h3
+                style="
+                  font-size: 16px;
+                  color: var(--white);
+                  margin-bottom: 16px;
+                "
+              >
+                📊 WEIGHTED RUBRIC
+              </h3>
+              <div class="rubric-grid" style="display: grid; gap: 12px">
+                <div class="rubric-item">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      margin-bottom: 4px;
+                    "
+                  >
+                    <span style="color: var(--text-main); font-size: 14px"
+                      >Market Clarity</span
+                    ><small
+                      id="val-market_clarity"
+                      style="color: var(--text-muted)"
+                      >0/10</small
+                    >
+                  </div>
+                  <div
+                    style="
+                      height: 6px;
+                      background: var(--bg-dark);
+                      border-radius: 3px;
+                    "
+                  >
+                    <div
+                      id="bar-market_clarity"
+                      style="
+                        height: 100%;
+                        background: var(--blue-light);
+                        width: 0%;
+                        border-radius: 3px;
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <div class="rubric-item">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      margin-bottom: 4px;
+                    "
+                  >
+                    <span style="color: var(--text-main); font-size: 14px"
+                      >Tech Maturity</span
+                    ><small
+                      id="val-tech_feasibility"
+                      style="color: var(--text-muted)"
+                      >0/10</small
+                    >
+                  </div>
+                  <div
+                    style="
+                      height: 6px;
+                      background: var(--bg-dark);
+                      border-radius: 3px;
+                    "
+                  >
+                    <div
+                      id="bar-tech_feasibility"
+                      style="
+                        height: 100%;
+                        background: var(--blue-light);
+                        width: 0%;
+                        border-radius: 3px;
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <div class="rubric-item">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      margin-bottom: 4px;
+                    "
+                  >
+                    <span style="color: var(--text-main); font-size: 14px"
+                      >Competition (Inverse)</span
+                    ><small
+                      id="val-competition_intensity"
+                      style="color: var(--text-muted)"
+                      >0/10</small
+                    >
+                  </div>
+                  <div
+                    style="
+                      height: 6px;
+                      background: var(--bg-dark);
+                      border-radius: 3px;
+                    "
+                  >
+                    <div
+                      id="bar-competition_intensity"
+                      style="
+                        height: 100%;
+                        background: var(--blue-light);
+                        width: 0%;
+                        border-radius: 3px;
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <div class="rubric-item">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      margin-bottom: 4px;
+                    "
+                  >
+                    <span style="color: var(--text-main); font-size: 14px"
+                      >MVP Simplicity</span
+                    ><small
+                      id="val-mvp_simplicity"
+                      style="color: var(--text-muted)"
+                      >0/10</small
+                    >
+                  </div>
+                  <div
+                    style="
+                      height: 6px;
+                      background: var(--bg-dark);
+                      border-radius: 3px;
+                    "
+                  >
+                    <div
+                      id="bar-mvp_simplicity"
+                      style="
+                        height: 100%;
+                        background: var(--blue-light);
+                        width: 0%;
+                        border-radius: 3px;
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <div class="rubric-item">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      margin-bottom: 4px;
+                    "
+                  >
+                    <span style="color: var(--text-main); font-size: 14px"
+                      >Regulatory Ease</span
+                    ><small
+                      id="val-regulatory_risk"
+                      style="color: var(--text-muted)"
+                      >0/10</small
+                    >
+                  </div>
+                  <div
+                    style="
+                      height: 6px;
+                      background: var(--bg-dark);
+                      border-radius: 3px;
+                    "
+                  >
+                    <div
+                      id="bar-regulatory_risk"
+                      style="
+                        height: 100%;
+                        background: var(--blue-light);
+                        width: 0%;
+                        border-radius: 3px;
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <div class="rubric-item">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      margin-bottom: 4px;
+                    "
+                  >
+                    <span style="color: var(--text-main); font-size: 14px"
+                      >Demand Strength</span
+                    ><small
+                      id="val-demand_strength"
+                      style="color: var(--text-muted)"
+                      >0/10</small
+                    >
+                  </div>
+                  <div
+                    style="
+                      height: 6px;
+                      background: var(--bg-dark);
+                      border-radius: 3px;
+                    "
+                  >
+                    <div
+                      id="bar-demand_strength"
+                      style="
+                        height: 100%;
+                        background: var(--blue-light);
+                        width: 0%;
+                        border-radius: 3px;
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="metrics-grid"
+              style="
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+                margin-bottom: 24px;
+              "
+            >
+              <div
+                class="metric-card"
+                style="
+                  background: var(--card-bg);
+                  padding: 16px;
+                  border: 1px solid var(--border-color);
+                  border-radius: 12px;
+                "
+              >
+                <span style="font-size: 12px; color: var(--text-muted)"
+                  >Estimated Investment (MVP)</span
+                >
+                <h3
+                  id="investment-estimate"
+                  style="
+                    font-size: 20px;
+                    color: var(--blue-light);
+                    margin: 8px 0;
+                  "
+                >
+                  --
+                </h3>
+              </div>
+              <div
+                class="metric-card"
+                style="
+                  background: var(--card-bg);
+                  padding: 16px;
+                  border: 1px solid var(--border-color);
+                  border-radius: 12px;
+                "
+              >
+                <span style="font-size: 12px; color: var(--text-muted)"
+                  >Cash Flow Projection</span
+                >
+                <p
+                  id="cash-flow-projection"
+                  style="font-size: 14px; color: var(--white); margin: 8px 0"
+                >
+                  --
+                </p>
+              </div>
+            </div>
+
+            <div class="scenarios-container" style="margin-bottom: 24px">
+              <h3
+                style="
+                  font-size: 16px;
+                  color: var(--white);
+                  margin-bottom: 16px;
+                "
+              >
+                📈 PROBABLE SCENARIOS
+              </h3>
+              <div
+                class="scenarios-grid"
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                  gap: 16px;
+                "
+              >
+                <div
+                  class="scenario-box"
+                  style="
+                    padding: 16px;
+                    background: rgba(0, 255, 100, 0.05);
+                    border: 1px solid rgba(0, 255, 100, 0.2);
+                    border-radius: 8px;
+                  "
+                >
+                  <span
+                    style="color: #00ff66; font-size: 14px; font-weight: bold"
+                    >Optimistic</span
+                  >
+                  <p
+                    id="scenario-opt"
+                    style="
+                      font-size: 14px;
+                      color: var(--text-main);
+                      margin-top: 8px;
+                    "
+                  >
+                    --
+                  </p>
+                </div>
+                <div
+                  class="scenario-box"
+                  style="
+                    padding: 16px;
+                    background: rgba(98, 132, 255, 0.05);
+                    border: 1px solid rgba(98, 132, 255, 0.2);
+                    border-radius: 8px;
+                  "
+                >
+                  <span
+                    style="
+                      color: var(--blue-light);
+                      font-size: 14px;
+                      font-weight: bold;
+                    "
+                    >Base / Neutral</span
+                  >
+                  <p
+                    id="scenario-neu"
+                    style="
+                      font-size: 14px;
+                      color: var(--text-main);
+                      margin-top: 8px;
+                    "
+                  >
+                    --
+                  </p>
+                </div>
+                <div
+                  class="scenario-box"
+                  style="
+                    padding: 16px;
+                    background: rgba(255, 92, 147, 0.05);
+                    border: 1px solid rgba(255, 92, 147, 0.2);
+                    border-radius: 8px;
+                  "
+                >
+                  <span
+                    style="
+                      color: var(--button-pink);
+                      font-size: 14px;
+                      font-weight: bold;
+                    "
+                    >Pessimistic</span
+                  >
+                  <p
+                    id="scenario-pes"
+                    style="
+                      font-size: 14px;
+                      color: var(--text-main);
+                      margin-top: 8px;
+                    "
+                  >
+                    --
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="mitigation-card hidden"
+              id="mitigation-card"
+              style="
+                background: rgba(255, 255, 0, 0.05);
+                border: 1px solid rgba(255, 255, 0, 0.2);
+                padding: 20px;
+                border-radius: 12px;
+              "
+            >
+              <h3 style="font-size: 16px; color: #ffd700; margin-bottom: 16px">
+                ⚠️ MITIGATION PLAN
+              </h3>
+              <ul
+                id="mitigation-list"
+                style="
+                  color: var(--text-main);
+                  padding-left: 20px;
+                  font-size: 14px;
+                  line-height: 1.6;
+                "
+              ></ul>
+            </div>
+          </div>
+        </aside>
+      </div>
     </div>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
