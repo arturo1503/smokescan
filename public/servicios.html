@@ -43,6 +43,104 @@
         y.parentNode.insertBefore(t, y);
       })(window, document, "clarity", "script", "w44egsaua2");
     </script>
+  
+    <!-- TAILWIND STITCH CONFIG -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+          tailwind.config = {
+            corePlugins: { preflight: false },
+            darkMode: "class",
+            theme: {
+              extend: {
+                colors: {
+                  "primary": "#EF4444",
+                  "primary-dim": "#DC2626",
+                  "primary-container": "#FCA5A5",
+                  "primary-fixed": "#EF4444",
+                  "primary-fixed-dim": "#DC2626",
+                  "inverse-primary": "#EF4444",
+                  "on-primary": "#FFFFFF",
+                  "on-primary-fixed": "#FFFFFF",
+                  "on-primary-container": "#7F1D1D",
+                  "on-primary-fixed-variant": "#7F1D1D",
+
+                  "background": "#0F172A",
+                  "on-background": "#F8FAFC",
+
+                  "surface": "#0F172A",
+                  "surface-dim": "#0F172A",
+                  "surface-bright": "#1E293B",
+                  "surface-container-lowest": "#0F172A",
+                  "surface-container-low": "#0F172A",
+                  "surface-container": "#1E293B",
+                  "surface-container-high": "#1E293B",
+                  "surface-container-highest": "#334155",
+                  "surface-variant": "#334155",
+                  "inverse-surface": "#F8FAFC",
+                  "inverse-on-surface": "#0F172A",
+                  "surface-tint": "#EF4444",
+                  "on-surface": "#F8FAFC",
+                  "on-surface-variant": "#CBD5E1",
+
+                  "secondary": "#3B82F6",
+                  "secondary-dim": "#1D4ED8",
+                  "secondary-fixed": "#3B82F6",
+                  "secondary-fixed-dim": "#1D4ED8",
+                  "secondary-container": "#93C5FD",
+                  "on-secondary": "#FFFFFF",
+                  "on-secondary-fixed": "#FFFFFF",
+                  "on-secondary-container": "#1E3A8A",
+                  "on-secondary-fixed-variant": "#1E3A8A",
+
+                  "tertiary": "#F472B6",
+                  "tertiary-dim": "#DB2777",
+                  "tertiary-fixed": "#F472B6",
+                  "tertiary-fixed-dim": "#DB2777",
+                  "tertiary-container": "#FBCFE8",
+                  "on-tertiary": "#FFFFFF",
+                  "on-tertiary-fixed": "#FFFFFF",
+                  "on-tertiary-container": "#831843",
+                  "on-tertiary-fixed-variant": "#831843",
+
+                  "error": "#EF4444",
+                  "error-dim": "#DC2626",
+                  "error-container": "#FCA5A5",
+                  "on-error": "#FFFFFF",
+                  "on-error-container": "#7F1D1D",
+
+                  "outline": "#64748B",
+                  "outline-variant": "#334155"
+                },
+                fontFamily: {
+                  "headline": ["Manrope"],
+                  "body": ["Inter"],
+                  "label": ["Inter"]
+                },
+                borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "9999px"},
+              },
+            },
+          }
+        </script>
+    <style>
+          .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+          }
+          .glass-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+          }
+          .gradient-text {
+            background: linear-gradient(135deg, #EF4444 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          .smoke-gradient {
+            background: radial-gradient(circle at top right, rgba(239, 68, 68, 0.15), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.05), transparent 40%);
+          }
+        </style>
   </head>
   <body>
     <!-- ==================== NAVBAR ==================== -->
@@ -72,367 +170,282 @@
           <a href="contacto.html" class="btn-nav-outline">Contact</a>
           <a href="smokescan/index.html" class="btn-nav-primary">SmokeScan</a>
         </div>
-        <button
-          class="menu-toggle"
-          id="mobile-menu-btn"
-          aria-label="Toggle menu"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
       </div>
     </nav>
 
-    <!-- ==================== HERO ==================== -->
-    <section class="services-hero">
-      <div class="container text-center">
-        <span class="section-tag section-tag--light">Services</span>
-        <h1 class="section-heading section-heading--light">
-          Evidence-based<br />decisions
-        </h1>
-        <p class="section-subtitle section-subtitle--light">
-          We accelerate your learning curve and minimize financial risk at every
-          digital stage.
-        </p>
-        <div class="section-actions justify-center">
-          <a href="#services-grid" class="btn-primary">Explore Services</a>
-          <a href="contacto.html" class="btn-outline">Contact Us</a>
-        </div>
-      </div>
-    </section>
 
-    <!-- ==================== SERVICES GRID ==================== -->
-    <section class="services-grid" id="services-grid">
-      <div class="container">
-        <!-- 01 Research -->
-        <div class="service-feature">
-          <div class="service-feature-info">
-            <span class="service-number">01</span>
-            <span class="service-tag">Research</span>
-          </div>
-          <div class="service-feature-content">
-            <div class="service-feature-text-side">
-              <span class="section-tag">Investigation</span>
-              <h2 class="section-heading">
-                Discover what your users<br />actually think
-              </h2>
-              <p class="section-body">
-                In-depth interviews, structured surveys, and real behavioral
-                analysis. We eliminate guesswork and capture insights that
-                matter for your fintech strategy.
-              </p>
-              <div class="section-actions">
-                <a href="contacto.html" class="btn-outline-dark">Request</a>
-                <a href="#" class="btn-text"
-                  >Explore <span class="arrow">›</span></a
-                >
-              </div>
-            </div>
-            <div class="service-feature-image-side">
-              <img
-                src="images/placeholder-image-360.png"
-                alt="Research"
-                class="rounded-img"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- 02 Validation -->
-        <div class="service-feature service-feature--reverse">
-          <div class="service-feature-info">
-            <span class="service-number">02</span>
-            <span class="service-tag">Validation</span>
-          </div>
-          <div class="service-feature-content">
-            <div class="service-feature-text-side">
-              <span class="section-tag">Demand</span>
-              <h2 class="section-heading">
-                Measure real intent<br />before investing
-              </h2>
-              <p class="section-body">
-                Controlled experiments with actual users generate actionable
-                evidence. Smoke tests that definitively reveal if your idea has
-                real market demand or is just noise.
-              </p>
-              <div class="section-actions">
-                <a href="contacto.html" class="btn-outline-dark">Request</a>
-                <a href="#" class="btn-text"
-                  >Explore <span class="arrow">›</span></a
-                >
-              </div>
-            </div>
-            <div class="service-feature-image-side">
-              <img
-                src="images/placeholder-image-381.png"
-                alt="Validation"
-                class="rounded-img"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- 03 MVP -->
-        <div class="service-feature">
-          <div class="service-feature-info">
-            <span class="service-number">03</span>
-            <span class="service-tag">MVP</span>
-          </div>
-          <div class="service-feature-content">
-            <div class="service-feature-text-side">
-              <span class="section-tag">Learning</span>
-              <h2 class="section-heading">
-                Build fast,<br />learn even faster
-              </h2>
-              <p class="section-body">
-                Low-code prototypes strictly focused on validation. Every
-                iteration generates real financial data that informs your next
-                strategic move.
-              </p>
-              <div class="section-actions">
-                <a href="#" class="btn-outline-dark">Request</a>
-                <a href="#" class="btn-text"
-                  >Explore <span class="arrow">›</span></a
-                >
-              </div>
-            </div>
-            <div class="service-feature-image-side">
-              <img
-                src="images/placeholder-image-402.png"
-                alt="MVP"
-                class="rounded-img"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== MODALIDADES (TABS) ==================== -->
-    <section class="modalidades" id="modalidades">
-      <div class="container">
-        <div class="modalidades-header text-center">
-          <span class="section-tag">Modalities</span>
-          <h2 class="section-heading">Choose your operational pace</h2>
-          <p class="section-subtitle">
-            Every project has its own timing. We offer three flexible models to
-            find the one that fits your stage and budget.
-          </p>
-          <div class="section-actions justify-center mt-32">
-            <a
-              href="contacto.html"
-              class="btn-nav-outline"
-              style="color: var(--navy); border-color: var(--gray-300)"
-              >Contact Us</a
-            >
-            <a href="#" class="btn-text"
-              >Explore <span class="arrow">›</span></a
-            >
-          </div>
-        </div>
-
-        <div class="tabs-container">
-          <div class="tabs-nav">
-            <button class="tab-btn active" data-tab="sprint">Sprint</button>
-            <button class="tab-btn" data-tab="monthly">Monthly</button>
-            <button class="tab-btn" data-tab="project">Project</button>
-          </div>
-          <div class="tabs-content">
-            <!-- Sprint Tab -->
-            <div class="tab-panel active" id="sprint">
-              <div class="tab-panel-grid">
-                <div class="tab-content-side">
-                  <span class="section-tag">Intensive</span>
-                  <h3 class="section-heading">
-                    Accelerated validation in two weeks
-                  </h3>
-                  <p class="section-body">
-                    Ideal when you need rapid answers. A complete experiment,
-                    analysis, and executive report delivered in record time.
-                    Perfect for urgent investment or pivot decisions.
-                  </p>
-                  <div class="section-actions">
-                    <a href="contacto.html" class="btn-primary">Start</a>
-                    <a href="#" class="btn-text"
-                      >Details <span class="arrow">›</span></a
-                    >
-                  </div>
+    <!-- STITCH WRAPPER FOR DARK MODE & TAILWIND STYLES -->
+    <div class="bg-background text-on-surface font-body selection:bg-primary/30 antialiased" style="background-color: #0F172A">
+        <main class="smoke-gradient pt-24">
+<!-- Hero Section -->
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 pt-20 pb-32">
+<div class="max-w-4xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold tracking-widest uppercase mb-8">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                    Validation First
                 </div>
-                <div class="tab-image-side">
-                  <img
-                    src="images/placeholder-image-444.png"
-                    alt="Sprint"
-                    class="rounded-img"
-                  />
-                </div>
-              </div>
-            </div>
-            <!-- Monthly Tab -->
-            <div class="tab-panel" id="monthly">
-              <div class="tab-panel-grid">
-                <div class="tab-content-side">
-                  <span class="section-tag">Continuous</span>
-                  <h3 class="section-heading">
-                    Monthly strategic accompaniment
-                  </h3>
-                  <p class="section-body">
-                    For teams that need constant validation. We become your
-                    experimentation arm, iterating every month on new hypotheses
-                    and products.
-                  </p>
-                  <div class="section-actions">
-                    <a href="contacto.html" class="btn-primary">Learn more</a>
-                    <a href="#" class="btn-text"
-                      >Details <span class="arrow">›</span></a
-                    >
-                  </div>
-                </div>
-                <div class="tab-image-side">
-                  <img
-                    src="images/placeholder-image-1148.png"
-                    alt="Monthly"
-                    class="rounded-img"
-                  />
-                </div>
-              </div>
-            </div>
-            <!-- Project Tab -->
-            <div class="tab-panel" id="project">
-              <div class="tab-panel-grid">
-                <div class="tab-content-side">
-                  <span class="section-tag">Structured</span>
-                  <h3 class="section-heading">Great bets properly validated</h3>
-                  <p class="section-body">
-                    Ideal for large-scale launches. A deep process that covers
-                    everything from initial research to a high-fidelity MVP
-                    validated by the market.
-                  </p>
-                  <div class="section-actions">
-                    <a href="contacto.html" class="btn-primary">Consult</a>
-                    <a href="#" class="btn-text"
-                      >Details <span class="arrow">›</span></a
-                    >
-                  </div>
-                </div>
-                <div class="tab-image-side">
-                  <img
-                    src="images/placeholder-image-507.png"
-                    alt="Project"
-                    class="rounded-img"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<h1 class="text-5xl md:text-8xl font-headline font-bold tracking-tight text-on-surface leading-[1.05] mb-8">
+                    Radically Different <br/>
+<span class="gradient-text">Product Validation.</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant font-body max-w-2xl leading-relaxed mb-12">
+                    Functional MVPs. Validated with Real Data. We build, but we validate first with real-user behavior assumptions.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="px-8 py-4 rounded-full border-none bg-gradient-to-r from-[#514EB8] to-[#E95058] text-white font-bold text-lg shadow-lg shadow-[#514EB8]/30 hover:scale-105 hover:shadow-[#E95058]/40 transition-[transform,shadow,box-shadow] cursor-pointer">Start Your Sprint</button>
+<button class="px-8 py-4 rounded-full border border-outline-variant/20 bg-surface-container/50 text-on-surface font-semibold hover:bg-surface-container transition-all cursor-pointer">View Methodology</button>
+</div>
+</div>
+</section>
+<!-- Metrics Grid -->
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 pb-32">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="p-8 rounded-xl bg-surface-container-low border-b-2 border-primary/20">
+<div class="text-3xl md:text-4xl font-headline font-bold text-on-surface mb-2">$1.26B</div>
+<div class="text-sm text-on-surface-variant font-label uppercase tracking-widest">VC Deployed Q1 2025</div>
+</div>
+<div class="p-8 rounded-xl bg-surface-container-low border-b-2 border-primary/20">
+<div class="text-3xl md:text-4xl font-headline font-bold text-on-surface mb-2">93%</div>
+<div class="text-sm text-on-surface-variant font-label uppercase tracking-widest">Fraud Reduction</div>
+</div>
+<div class="p-8 rounded-xl bg-surface-container-low border-b-2 border-primary/20">
+<div class="text-3xl md:text-4xl font-headline font-bold text-on-surface mb-2">-40%</div>
+<div class="text-sm text-on-surface-variant font-label uppercase tracking-widest">Market Entry Time</div>
+</div>
+<div class="p-8 rounded-xl bg-surface-container-low border-b-2 border-primary/20">
+<div class="text-3xl md:text-4xl font-headline font-bold text-on-surface mb-2">98.4%</div>
+<div class="text-sm text-on-surface-variant font-label uppercase tracking-widest">Validation Accuracy</div>
+</div>
+</div>
+</section>
+<!-- The Validation Gap (Asymmetric Layout) -->
+<section class="bg-surface-container-low py-32 overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12 flex flex-col md:flex-row gap-20 items-center">
+<div class="w-full md:w-1/2">
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface mb-8 leading-tight">
+                        The Validation Gap: <br/>
+<span class="text-on-surface-variant">Why 90% of Fintechs Fail.</span>
+</h2>
+<p class="text-lg text-on-surface-variant mb-12 max-w-lg">
+                        The market is littered with perfectly built products that nobody wanted. We solve for the gap between "Building" and "Validating" by forcing real-world friction into the design process.
+                    </p>
+<div class="space-y-8">
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="target">target</span>
+</div>
+<div>
+<h4 class="text-xl font-semibold text-on-surface mb-1">Precision Targeting</h4>
+<p class="text-on-surface-variant">Eliminate guesswork by mapping features directly to high-intent user behavior.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+</div>
+<div>
+<h4 class="text-xl font-semibold text-on-surface mb-1">Risk Mitigation</h4>
+<p class="text-on-surface-variant">Stress-test regulatory and fraud assumptions before the first line of code.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+</div>
+<div>
+<h4 class="text-xl font-semibold text-on-surface mb-1">Time to Market</h4>
+<p class="text-on-surface-variant">Compress months of R&amp;D into high-velocity 2-week validation sprints.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-square rounded-2xl bg-surface-container overflow-hidden border border-outline-variant/10 shadow-2xl">
+<img class="w-full h-full object-cover opacity-60 mix-blend-luminosity" data-alt="Abstract visualization of complex data streams and geometric nodes in a dark futuristic digital space with purple neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgbXeWLX9qFXrYCrmYd2gdaeQ5dh41IkJmTNSA_mslLrBfQkilAkhD0_roOBgmbr8n4D8SyVdjiMNXzV9SX1OD4VgUqaFa3l39ab10iisM_V4YHB1xxoLch82bgvDjy-FguSRnLTX-19Kk4-WaMzHlheV6GhVjHqz-dGFbQDnSxMDYaoIVfew1hQV9mPnfInGaRQHrDHWwTZUQFGfbL_v9U5qNbF-7cSYrcAz7DrEFXZt2p1Q7Qk-kFStCUyKeZwqukBcu_Uyy4tk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="absolute -bottom-10 -left-10 glass-card p-8 rounded-2xl border border-primary/20 max-w-xs shadow-2xl">
+<div class="text-primary font-bold text-4xl mb-2">90%</div>
+<p class="text-sm text-on-surface-variant">Reduction in development waste for our 2024 cohort participants.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Validation Hub (Bento Grid) -->
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 py-32">
+<div class="mb-16">
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface mb-4">Low-Code &amp; No-Code Hub</h2>
+<p class="text-xl text-on-surface-variant">Building the future, faster. Validating usability with real data before final delivery.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[280px]">
+<!-- Main Highlight -->
+<div class="md:col-span-8 md:row-span-2 glass-card rounded-2xl p-10 border border-outline-variant/10 flex flex-col justify-end relative overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 transition-transform duration-700 group-hover:scale-105" data-alt="A professional dark workspace with high-end monitors showing interface prototypes and complex flowcharts with glowing purple connections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHBjLttcbjvll9MahJyK-fztGHqkX52B-e09FeI3N6JhHGy1sA4tMjMWlyv9AxbAp5OLsIxXxKgiQcdsOrobCCUmsSbtep52gzpAKoxyCjWYlhoO67NLhEHvQYRohiO0I78xXpE0dgCcTH6sZsXHlgI1XGJ41Cs5UuaukzXg76INCn0PD0NVqUPEvrpZh0NCd_OyRAJHfEcIcLbDtNrxLuU_e0Cm8DPJJYtSyYycpDch6LW9QAdb7iK-G0lvVcYhb7_EhZkvgQuhE"/>
+<div class="relative z-10">
+<div class="text-primary font-label tracking-widest uppercase mb-4">Core Differentiator</div>
+<h3 class="text-3xl font-bold mb-4">Real-Data Launch</h3>
+<p class="text-on-surface-variant text-lg max-w-xl mb-8">We don't just build UI; we hook your prototypes into live APIs and production-ready databases from Day 1. See how your product scales before it actually exists.</p>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 rounded-full bg-surface-container-highest text-primary text-sm font-semibold border border-primary/20">Bubble</span>
+<span class="px-4 py-2 rounded-full bg-surface-container-highest text-primary text-sm font-semibold border border-primary/20">FlutterFlow</span>
+<span class="px-4 py-2 rounded-full bg-surface-container-highest text-primary text-sm font-semibold border border-primary/20">Xano</span>
+<span class="px-4 py-2 rounded-full bg-surface-container-highest text-primary text-sm font-semibold border border-primary/20">Make.com</span>
+</div>
+</div>
+</div>
+<!-- Small Grid Items -->
+<div class="md:col-span-4 glass-card rounded-2xl p-8 border border-outline-variant/10 flex flex-col justify-between hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="speed">speed</span>
+<div>
+<h4 class="text-xl font-bold mb-2">Rapid Prototyping</h4>
+<p class="text-sm text-on-surface-variant">From concept to functional test in under 72 hours.</p>
+</div>
+</div>
+<div class="md:col-span-4 glass-card rounded-2xl p-8 border border-outline-variant/10 flex flex-col justify-between hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="touch_app">touch_app</span>
+<div>
+<h4 class="text-xl font-bold mb-2">Usability-First</h4>
+<p class="text-sm text-on-surface-variant">Behavioral heatmaps and session recordings on every MVP.</p>
+</div>
+</div>
+<!-- Wide Bottom Item -->
+<div class="md:col-span-12 glass-card rounded-2xl p-10 border border-outline-variant/10 flex flex-col md:flex-row items-center gap-12 mt-4">
+<div class="flex-1">
+<h3 class="text-3xl font-bold mb-4">Scalable Stacks</h3>
+<p class="text-on-surface-variant leading-relaxed">Our no-code architecture isn't just for toys. We build enterprise-ready foundations that transition seamlessly to traditional code when you're ready to scale to millions of users.</p>
+</div>
+<div class="flex gap-4 items-center">
+<div class="w-16 h-16 rounded-xl bg-surface-container-highest flex items-center justify-center border border-outline-variant/20">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="web">web</span>
+</div>
+<div class="w-16 h-16 rounded-xl bg-surface-container-highest flex items-center justify-center border border-outline-variant/20">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="database">database</span>
+</div>
+<div class="w-16 h-16 rounded-xl bg-surface-container-highest flex items-center justify-center border border-outline-variant/20">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="hub">hub</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Validation Engagements (Pricing) -->
+<section class="bg-surface-container-low py-32">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-headline font-bold mb-4">Engagement Models</h2>
+<p class="text-on-surface-variant">Transparent pricing for radical validation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container rounded-2xl p-10 border border-outline-variant/10 flex flex-col h-full hover:scale-[1.02] transition-transform">
+<h4 class="text-xl font-bold mb-2">Smoke Test Sprint</h4>
 
-    <!-- ==================== TESTIMONIALS ==================== -->
-    <section class="lo-que-dicen" id="testimonials">
-      <div class="container">
-        <div class="text-center mb-64">
-          <h2 class="section-heading section-heading--light">What they say</h2>
-          <p class="section-subtitle section-subtitle--light">
-            Fintech teams that have already validated with us
-          </p>
-        </div>
-        <div class="testimonials-grid">
-          <!-- Testimonial 1 -->
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-text">
-              "SmokeStudio transformed our assumptions into real data. We
-              avoided building features nobody wanted."
-            </p>
-            <div class="testimonial-author">
-              <img
-                src="images/avatar-image-462.svg"
-                alt="Maria Rodriguez"
-                class="author-img"
-              />
-              <div class="author-info">
-                <p class="author-name">Maria Rodriguez</p>
-                <p class="author-role">Product Manager, TechStart</p>
-              </div>
-            </div>
-          </div>
-          <!-- Testimonial 2 -->
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-text">
-              "The evidence report was exactly what we needed to convince
-              investors. Hard data, not opinions."
-            </p>
-            <div class="testimonial-author">
-              <img
-                src="images/avatar-image-476.svg"
-                alt="Carlos Mendez"
-                class="author-img"
-              />
-              <div class="author-info">
-                <p class="author-name">Carlos Mendez</p>
-                <p class="author-role">Founder, Digital Ventures</p>
-              </div>
-            </div>
-          </div>
-          <!-- Testimonial 3 -->
-          <div class="testimonial-card">
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-text">
-              "We learned more in four weeks than in six months of development.
-              The methodology works."
-            </p>
-            <div class="testimonial-author">
-              <img
-                src="images/avatar-image-490.svg"
-                alt="Laura Sanchez"
-                class="author-img"
-              />
-              <div class="author-info">
-                <p class="author-name">Laura Sanchez</p>
-                <p class="author-role">CTO, Innovation Labs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<p class="text-on-surface-variant mb-8 flex-grow">A high-velocity 2-week validation burst. Ideal for initial concept testing and feature assumptions.</p>
+<ul class="space-y-4 mb-10 text-sm">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Core User Flow Prototype
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Behavioral Data Report
+                            </li>
+</ul>
+<button class="w-full py-4 rounded-full border-none bg-gradient-to-r from-[#514EB8] to-[#E95058] text-white font-bold transition-[transform,shadow,box-shadow] shadow-lg shadow-[#514EB8]/30 hover:scale-[1.03] hover:shadow-[#E95058]/40 cursor-pointer">Book Sprint</button>
+</div>
+<!-- Card 2 (Featured) -->
+<div class="bg-surface-container-high rounded-2xl p-10 border-2 border-primary flex flex-col h-full relative overflow-hidden shadow-2xl shadow-primary/10">
+<div class="absolute top-0 right-0 px-4 py-1 bg-primary text-on-primary text-xs font-bold uppercase tracking-tighter">Most Popular</div>
+<h4 class="text-xl font-bold mb-2">Market Deep-Dive</h4>
 
-    <!-- ==================== CTA ==================== -->
-    <section class="cta-section" id="cta">
-      <div class="container">
-        <div class="cta-grid">
-          <div class="cta-content">
-            <h2 class="section-heading">Turn uncertainty into certainty</h2>
-            <p class="section-body">
-              A free diagnostic will show you exactly where the real risk lies.
-            </p>
-            <div class="section-actions">
-              <a href="contacto.html" class="btn-primary">Get Diagnostic</a>
-              <a href="nosotros.html" class="btn-outline-dark">Why us?</a>
-            </div>
-          </div>
-          <div class="cta-image">
-            <img
-              src="images/placeholder-image-507.png"
-              alt="Diagnostic"
-              class="rounded-img"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+<p class="text-on-surface-variant mb-8 flex-grow">Full-scale research for Series A/B firms looking to pivot or expand their product ecosystem safely.</p>
+<ul class="space-y-4 mb-10 text-sm">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Multi-Channel Validation
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Regulatory Stress-Testing
+                            </li>
+</ul>
+<button class="w-full py-4 rounded-full border-none bg-gradient-to-r from-[#514EB8] to-[#E95058] text-white font-bold transition-[transform,shadow,box-shadow] shadow-lg shadow-[#514EB8]/30 hover:scale-[1.03] hover:shadow-[#E95058]/40 cursor-pointer">Get Proposal</button>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container rounded-2xl p-10 border border-outline-variant/10 flex flex-col h-full hover:scale-[1.02] transition-transform">
+<h4 class="text-xl font-bold mb-2">Innovation Lab</h4>
+
+<p class="text-on-surface-variant mb-8 flex-grow">A continuous, multi-sprint R&amp;D partnership actings as your external validation arm.</p>
+<ul class="space-y-4 mb-10 text-sm">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Dedicated Validation Team
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+                                Unlimited Prototypes
+                            </li>
+</ul>
+<button class="w-full py-4 rounded-full border-none bg-gradient-to-r from-[#514EB8] to-[#E95058] text-white font-bold transition-[transform,shadow,box-shadow] shadow-lg shadow-[#514EB8]/30 hover:scale-[1.03] hover:shadow-[#E95058]/40 cursor-pointer">Contact Us</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Fintech Outcomes (Case Studies) -->
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 py-32">
+<h2 class="text-4xl font-headline font-bold mb-16">Fintech Outcomes</h2>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+<div class="group cursor-pointer">
+<div class="aspect-video rounded-xl bg-surface-container overflow-hidden mb-6 border border-outline-variant/10">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" data-alt="Modern mobile app interface with biometric authentication screens and sleek security indicators in a dark UI aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5UIYKFQdvpMoeOE-Xw9n-5OYTTk3m2JSHiGL9MsjPYaByhSNFz28Bt4GZ-ycOrRCVmhCLgkgUqXZpQkZAtisW-DEZyULRAQECWsgrQfHrlPmokU-CO17Ag6qYIF7QhlouUPg79Bfg26Obapl1Ww4UQCi2_Gu8p2Cr3nlxlNCeZMRhQwNimAECRDESCrfHFJBiIJm5Do7gh1fjy2anCX6kViILprD7h4M5Ir7TDx6poKh6s8Id4T5__N8x3AxeZeql_D9kEFDTPaQ"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-xl font-bold">Digital Identity Validation</h3>
+<div class="text-primary font-bold text-lg">93% Fraud ↓</div>
+</div>
+<p class="text-on-surface-variant">Validated a new AML-compliant onboarding flow for a Tier 1 Canadian bank using high-fidelity no-code prototypes.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video rounded-xl bg-surface-container overflow-hidden mb-6 border border-outline-variant/10">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" data-alt="Digital dashboard displaying real-time financial markets and lending metrics with glowing lines and sophisticated dark data visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFKAEf77rQEu3ZGasYKd7eNrMv-cJrj8d_ahtakkmFm1hpE_wHFZ-K9T2O8b24z-07hfZV-tfzfgJx3nzsDNKn-qwg2XMpHgMJ2lz2zPUV9lUUtjjDTR-aldGNhRiYZTcZOT8B3MYK-QuD85f_ECUpBnGvIxcIXFyKrxeYNVgwxcUh1Kt5dUlWkx1GeTh4N8l-99ayk5LqvlIERJ7qWuTKfjuGnD0zlCVif-NunOcCYpqHog5WtLMK5AAIW_wwLka0SqGLLOr6-Cg"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-xl font-bold">Embedded Lending Pivot</h3>
+<div class="text-primary font-bold text-lg">Zero Friction</div>
+</div>
+<p class="text-on-surface-variant">Rapidly tested market appetite for a B2B lending module before engineering committed to a core architecture change.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video rounded-xl bg-surface-container overflow-hidden mb-6 border border-outline-variant/10">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-70 group-hover:opacity-100" data-alt="Clean minimal trading interface on a smartphone screen showing wealth growth charts with a focused aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsEGXlVnCxMitF0q2EtPaPiePgfOwKkufGih_NWYTwUpaerdIOt1X51Cazx-e9nKn4IMD9LUtSYkRnHJUNKOrW_Cd756Hu4YmBAjpjFE7AfPSYCtSdIZLd6M6-SGZqrfF8D6xmJp7322t10sL-eMEZdZboWJxiPXCdu7N3XmtwopJaR1VHf-a1XtANoAwImm93bWo59F5RT8wAAvSPNLSVK4cOy0GdVydiLSu9dwYWhbtSw3ZvKZbe4aaSDXUzTDa7f47IiU6Rrdc"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-xl font-bold">WealthTech Onboarding</h3>
+<div class="text-primary font-bold text-lg">50% Faster</div>
+</div>
+<p class="text-on-surface-variant">Redesigned the first-mile experience for a Millennial investing platform, doubling the account activation rate.</p>
+</div>
+</div>
+</section>
+
+<!-- Final CTA -->
+<section class="max-w-[1440px] mx-auto px-6 md:px-12 py-32 text-center">
+<div class="max-w-3xl mx-auto py-20 px-10 rounded-3xl bg-surface-container border border-primary/20 relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 blur-[100px]"></div>
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-primary-dim/10 blur-[100px]"></div>
+<h2 class="text-4xl md:text-5xl font-headline font-bold mb-6">Reduce your risk today.</h2>
+<p class="text-xl text-on-surface-variant mb-12">Stop building features nobody wants. Start validating assumptions with real behavior.</p>
+<button class="px-12 py-5 rounded-full border-none bg-gradient-to-r from-[#514EB8] to-[#E95058] text-white font-bold text-xl shadow-xl shadow-[#514EB8]/30 hover:scale-105 hover:shadow-[#E95058]/40 transition-[transform,shadow,box-shadow,opacity]">
+                    Get a Smoke Test
+                </button>
+</div>
+</section>
+</main>
+    </div>
+
 
     <!-- ==================== FOOTER ==================== -->
     <footer class="footer" id="footer">
@@ -519,37 +532,7 @@
       </div>
     </footer>
 
-    <!-- ==================== MOBILE MENU ==================== -->
-    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
-      <a href="index.html" class="mobile-nav-link" onclick="closeMobileMenu()"
-        >Home</a
-      >
-      <a
-        href="servicios.html"
-        class="mobile-nav-link"
-        onclick="closeMobileMenu()"
-        >Services</a
-      >
-      <a
-        href="nosotros.html"
-        class="mobile-nav-link"
-        onclick="closeMobileMenu()"
-        >About Us</a
-      >
-      <a
-        href="contacto.html"
-        class="mobile-nav-link"
-        onclick="closeMobileMenu()"
-        >Contact</a
-      >
-      <a
-        href="smokescan/index.html"
-        class="btn-primary"
-        style="margin-top: 24px; font-size: 18px; padding: 14px 32px"
-        onclick="closeMobileMenu()"
-        >Validate</a
-      >
-    </div>
+
 
     <script>
       // Simple Tab Logic
@@ -565,29 +548,6 @@
           document.getElementById(btn.dataset.tab).classList.add("active");
         });
       });
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const menuBtn = document.getElementById("mobile-menu-btn");
-        const mobileMenu = document.getElementById("mobile-menu-overlay");
-        if (menuBtn && mobileMenu) {
-          menuBtn.addEventListener("click", () => {
-            mobileMenu.classList.toggle("active");
-            document.body.style.overflow = mobileMenu.classList.contains(
-              "active",
-            )
-              ? "hidden"
-              : "";
-          });
-        }
-      });
-
-      function closeMobileMenu() {
-        const mobileMenu = document.getElementById("mobile-menu-overlay");
-        if (mobileMenu) {
-          mobileMenu.classList.remove("active");
-          document.body.style.overflow = "";
-        }
-      }
     </script>
   </body>
 </html>
