@@ -123,17 +123,17 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--coral);
+  background: linear-gradient(90deg, #514EB8, #E95058);
   color: var(--white);
   font-family: var(--font);
   font-size: 14px;
   font-weight: 600;
   padding: 12px 28px;
   border-radius: 50px;
-  transition: background 0.2s, transform 0.15s;
+  transition: opacity 0.2s, transform 0.15s;
 }
 .btn-primary:hover {
-  background: var(--coral-hover);
+  opacity: 0.9;
   transform: translateY(-1px);
 }
 
@@ -250,12 +250,14 @@ a {
   font-size: 14px;
   font-weight: 600;
   color: var(--white);
-  background: var(--coral);
+  background: linear-gradient(90deg, #514EB8, #E95058);
   padding: 8px 24px;
   border-radius: 50px;
-  transition: background 0.2s;
+  transition: opacity 0.2s;
 }
-.btn-nav-primary:hover { background: var(--coral-hover); }
+.btn-nav-primary:hover {
+  opacity: 0.9;
+}
 
 /* === HERO === */
 .hero {

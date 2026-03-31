@@ -29,7 +29,7 @@ nav.scrolled { background: rgba(10, 10, 11, 0.85); backdrop-filter: blur(16px); 
 /* Buttons */
 .btn-capsule { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-color); color: var(--text-primary) !important; padding: 12px 28px; border-radius: 50px; font-weight: 500; font-size: 0.95rem; transition: all 0.2s; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; text-decoration: none;}
 .btn-capsule:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-2px); border-color: rgba(255,255,255,0.2); }
-.btn-primary { background: linear-gradient(90deg, var(--accent), var(--accent-secondary)); color: white !important; padding: 14px 36px; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px var(--accent-glow); transition: all 0.2s; border: none; cursor: pointer;}
+.btn-primary { background: linear-gradient(90deg, #514EB8, #E95058); color: white !important; padding: 14px 36px; border-radius: 50px; font-weight: 600; font-size: 1rem; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px var(--accent-glow); transition: all 0.2s; border: none; cursor: pointer;}
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(236, 72, 153, 0.35); }
 .btn-text { color: var(--text-primary); text-decoration: none; font-weight: 600; border-bottom: 1px solid var(--accent); padding-bottom: 2px; transition: opacity 0.2s; display: inline-block;}
 .btn-text:hover { opacity: 0.8; }

@@ -419,8 +419,8 @@ body {
 }
 
 .send-btn {
-    background: var(--button-pink);
-    color: #000;
+    background: linear-gradient(90deg, #514EB8, #E95058);
+    color: var(--text-main);
     border: none;
     padding: 12px 24px;
     border-radius: 100px;
